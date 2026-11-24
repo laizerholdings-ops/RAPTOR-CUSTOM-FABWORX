@@ -1,0 +1,2698 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RAPTOR CUSTOM FABWORX | Precision Metal &amp; Structural Steel Fabrication — Vosloorus, Gauteng</title>
+  <meta name="description" content="RAPTOR CUSTOM FABWORX delivers custom metal fabrication, structural steel fabrication, welding services, and bespoke engineering in Vosloorus, Gauteng, South Africa. Call 079 265 8508." />
+  <meta name="keywords" content="Metal fabrication Vosloorus, Metal fabricators Gauteng, Steel fabrication South Africa, Custom metal fabrication, Welding services Vosloorus, Structural steel fabrication, Raptor Custom FabWorx" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://raptorcustomfabworx.co.za/" />
+
+  <!-- Open Graph / Social Metadata -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="RAPTOR CUSTOM FABWORX — Engineering Strength. Creating Possibilities." />
+  <meta property="og:description" content="Precision Metal Fabrication. Exceptional Craftsmanship. Built for Performance. Located in Vosloorus, Gauteng, South Africa." />
+  <meta property="og:site_name" content="RAPTOR CUSTOM FABWORX" />
+  <meta property="og:locale" content="en_ZA" />
+
+  <!-- LocalBusiness Structured Data (JSON-LD) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "RAPTOR CUSTOM FABWORX",
+    "description": "Precision metal fabrication, structural steel fabrication, welding services, and custom metal engineering in Vosloorus, Gauteng, South Africa.",
+    "telephone": "+27792658508",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "8039 Lekoloane Street, Marimba Gardens Ext. 9",
+      "addressLocality": "Vosloorus",
+      "addressRegion": "Gauteng",
+      "postalCode": "1475",
+      "addressCountry": "ZA"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Vosloorus" },
+      { "@type": "State", "name": "Gauteng" },
+      { "@type": "Country", "name": "South Africa" }
+    ],
+    "knowsAbout": [
+      "Custom Metal Fabrication",
+      "Structural Steel Fabrication",
+      "Welding Services",
+      "Metal Cutting and Shaping",
+      "Custom Steel Structures",
+      "Metal Gates and Security Solutions"
+    ]
+  }
+  </script>
+
+  <!-- Fonts: Geometric Industrial Display + Technical Monospace + Clean Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:ital,wght@0,500;0,600;0,700;1,700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            obsidian: '#080A0C',
+            graphite: '#171A1E',
+            titanium: '#AEB5BD',
+            platinum: '#E4E7EA',
+            electric: '#FF5A1F',
+          },
+          fontFamily: {
+            display: ['"Chakra Petch"', 'sans-serif'],
+            sans: ['"Inter"', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace'],
+          },
+          backgroundImage: {
+            'metallic-sheen': 'linear-gradient(135deg, #FFFFFF 0%, #E4E7EA 35%, #AEB5BD 70%, #6D747C 100%)',
+            'carbon-grid': 'radial-gradient(rgba(174, 181, 189, 0.08) 1px, transparent 1px)',
+          }
+        }
+      }
+    };
+  </script>
+
+  <!-- Three.js & GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+  <style>
+    :root {
+      --obsidian: #080A0C;
+      --graphite: #171A1E;
+      --titanium: #AEB5BD;
+      --platinum: #E4E7EA;
+      --electric: #FF5A1F;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html, body {
+      background-color: var(--obsidian);
+      color: var(--platinum);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #080A0C;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2C3138;
+      border-radius: 3px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #FF5A1F;
+    }
+
+    /* Brushed Metal & Titanium Text Effects */
+    .text-titanium-gradient {
+      background: linear-gradient(180deg, #FFFFFF 0%, #E4E7EA 48%, #8F97A0 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .text-chrome-sweep {
+      background: linear-gradient(110deg, #AEB5BD 20%, #FFFFFF 45%, #FF5A1F 50%, #FFFFFF 55%, #AEB5BD 80%);
+      background-size: 250% auto;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      animation: chromeSweep 7s linear infinite;
+    }
+
+    @keyframes chromeSweep {
+      0% { background-position: 200% center; }
+      100% { background-position: -200% center; }
+    }
+
+    /* Industrial Surface & Architectural Borders */
+    .surface-glass {
+      background: rgba(13, 16, 20, 0.78);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1px solid rgba(174, 181, 189, 0.14);
+    }
+
+    .surface-card {
+      background: linear-gradient(160deg, rgba(23, 26, 30, 0.92) 0%, rgba(11, 13, 16, 0.98) 100%);
+      border: 1px solid rgba(174, 181, 189, 0.12);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+    }
+
+    .grid-blueprint {
+      background-size: 36px 36px;
+      background-image: 
+        linear-gradient(to right, rgba(174, 181, 189, 0.04) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(174, 181, 189, 0.04) 1px, transparent 1px);
+    }
+
+    /* Metallic Sweep Highlight on Hover */
+    .metallic-card {
+      position: relative;
+      overflow: hidden;
+    }
+    .metallic-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -120%;
+      width: 75%;
+      height: 100%;
+      background: linear-gradient(
+        105deg,
+        transparent 20%,
+        rgba(255, 255, 255, 0.09) 48%,
+        rgba(255, 90, 31, 0.16) 52%,
+        transparent 80%
+      );
+      transform: skewX(-22deg);
+      transition: left 0.85s cubic-bezier(0.19, 1, 0.22, 1);
+      pointer-events: none;
+      z-index: 20;
+    }
+    .metallic-card:hover::before {
+      left: 165%;
+    }
+
+    /* Cinematic Intro Sweep */
+    @keyframes forgeBeam {
+      0% { transform: translateX(-120%) skewX(-25deg); opacity: 0; }
+      35% { opacity: 0.9; }
+      65% { opacity: 0.9; }
+      100% { transform: translateX(220%) skewX(-25deg); opacity: 0; }
+    }
+    .animate-forge-beam {
+      animation: forgeBeam 2.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    }
+
+    /* Subtle Waveform Bars (Visual-Only Acoustic Pulse) */
+    @keyframes barPulse {
+      0%, 100% { transform: scaleY(0.25); }
+      50% { transform: scaleY(1); }
+    }
+    .acoustic-bar {
+      transform-origin: bottom;
+      animation: barPulse 1.4s ease-in-out infinite;
+    }
+
+    /* Cinematic Ken Burns Slow-Motion Video-Style Slideshow */
+    @keyframes kenBurnsDrift {
+      0% {
+        transform: scale(1.0) translate3d(0%, 0%, 0);
+      }
+      50% {
+        transform: scale(1.09) translate3d(-1.5%, -1%, 0);
+      }
+      100% {
+        transform: scale(1.14) translate3d(1.2%, -1.8%, 0);
+      }
+    }
+    .cinema-slide {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 2.2s cubic-bezier(0.22, 1, 0.36, 1);
+      will-change: opacity, transform;
+    }
+    .cinema-slide.is-active {
+      opacity: 1;
+      animation: kenBurnsDrift 14s ease-in-out infinite alternate;
+    }
+
+    /* Reduced Motion Support */
+    @media (prefers-reduced-motion: reduce) {
+      *, ::before, ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+      #intro-curtain {
+        display: none !important;
+      }
+    }
+  </style>
+</head>
+<body class="bg-obsidian text-platinum selection:bg-electric selection:text-white relative">
+
+  <!-- =====================================================================
+       GLOBAL AMBIENT CINEMATIC PHOTO SLIDESHOW (FLOWS BEHIND ENTIRE SITE)
+       ===================================================================== -->
+  <div id="global-ambient-reel" class="fixed inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
+    <img src="https://images.pexels.com/photos/3970340/pexels-photo-3970340.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" class="cinema-slide is-active brightness-[0.38] contrast-125" />
+    <img src="https://images.pexels.com/photos/5846146/pexels-photo-5846146.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" class="cinema-slide brightness-[0.38] contrast-125" />
+    <img src="https://images.pexels.com/photos/28216642/pexels-photo-28216642.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" class="cinema-slide brightness-[0.38] contrast-125" />
+    <img src="https://images.pexels.com/photos/38520034/pexels-photo-38520034.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" class="cinema-slide brightness-[0.38] contrast-125" />
+    <img src="https://images.pexels.com/photos/10682523/pexels-photo-10682523.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" class="cinema-slide brightness-[0.38] contrast-125" />
+    <img src="https://images.pexels.com/photos/10395741/pexels-photo-10395741.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="" class="cinema-slide brightness-[0.38] contrast-125" />
+    <div class="absolute inset-0 bg-gradient-to-b from-obsidian/85 via-obsidian/75 to-obsidian/90"></div>
+  </div>
+
+  <!-- =====================================================================
+       02. CINEMATIC INTRODUCTION OVERLAY (OPENS AUTOMATICALLY, ZERO AUDIO)
+       ===================================================================== -->
+  <div id="intro-curtain" class="fixed inset-0 z-[100] bg-obsidian flex flex-col items-center justify-center overflow-hidden select-none">
+    <!-- Moving Industrial Light Sweep -->
+    <div class="absolute inset-0 pointer-events-none overflow-hidden">
+      <div class="w-1/2 h-full bg-gradient-to-r from-transparent via-electric/20 to-transparent animate-forge-beam"></div>
+    </div>
+    <div class="absolute inset-0 grid-blueprint opacity-40"></div>
+
+    <!-- 3D Metallic Emblem & Brand Reveal -->
+    <div id="intro-logo-wrap" class="relative z-10 flex flex-col items-center px-6 text-center opacity-0 scale-95 transition-all duration-1000">
+      <div class="relative w-24 h-24 sm:w-28 sm:h-28 mb-6 flex items-center justify-center">
+        <div class="absolute inset-0 rounded-2xl bg-gradient-to-tr from-electric/30 via-white/10 to-transparent blur-xl"></div>
+        <svg viewBox="0 0 120 120" class="w-full h-full drop-shadow-[0_10px_30px_rgba(255,90,31,0.35)]">
+          <defs>
+            <linearGradient id="raptorSteelIntro" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#FFFFFF" />
+              <stop offset="45%" stop-color="#E4E7EA" />
+              <stop offset="75%" stop-color="#7B828A" />
+              <stop offset="100%" stop-color="#22262C" />
+            </linearGradient>
+            <linearGradient id="raptorEmber" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#FF5A1F" />
+              <stop offset="100%" stop-color="#FF8A5B" />
+            </linearGradient>
+          </defs>
+          <!-- Outer Precision Hex-Shield -->
+          <polygon points="60,6 108,33 108,87 60,114 12,87 12,33" fill="#0E1115" stroke="url(#raptorSteelIntro)" stroke-width="3" />
+          <polygon points="60,14 100,37 100,83 60,106 20,83 20,37" fill="none" stroke="rgba(174,181,189,0.25)" stroke-width="1" />
+          <!-- Angular Raptor Structural Talon / R Monogram -->
+          <path d="M36 84 L36 34 L68 34 C79 34 86 41 86 50 C86 58 80 64 71 66 L88 84 L73 84 L58 67 L48 67 L48 84 Z M48 44 L48 57 L66 57 C71 57 74 54 74 50.5 C74 47 71 44 66 44 Z" fill="url(#raptorSteelIntro)" />
+          <!-- Laser Cut Ember Accent -->
+          <path d="M30 92 L90 92" stroke="url(#raptorEmber)" stroke-width="3" stroke-linecap="square" />
+        </svg>
+      </div>
+
+      <div class="font-mono text-[11px] tracking-[0.42em] text-electric uppercase mb-2">
+        PRECISION METAL ENGINEERING
+      </div>
+      <h2 class="font-display font-bold text-2xl sm:text-4xl tracking-[0.22em] text-titanium-gradient uppercase">
+        RAPTOR CUSTOM FABWORX
+      </h2>
+
+      <!-- Visual-only acoustic & laser telemetry bars (no audio auto-played) -->
+      <div class="mt-8 flex items-end gap-1.5 h-5" aria-hidden="true">
+        <span class="w-1 h-full bg-electric/80 acoustic-bar" style="animation-delay: 0.0s"></span>
+        <span class="w-1 h-full bg-titanium/70 acoustic-bar" style="animation-delay: 0.2s"></span>
+        <span class="w-1 h-full bg-white acoustic-bar" style="animation-delay: 0.4s"></span>
+        <span class="w-1 h-full bg-electric acoustic-bar" style="animation-delay: 0.15s"></span>
+        <span class="w-1 h-full bg-titanium/70 acoustic-bar" style="animation-delay: 0.35s"></span>
+        <span class="w-1 h-full bg-electric/80 acoustic-bar" style="animation-delay: 0.5s"></span>
+      </div>
+
+      <div class="mt-5 w-56 sm:w-72 h-[2px] bg-graphite overflow-hidden rounded-full">
+        <div id="intro-progress" class="h-full w-0 bg-gradient-to-r from-titanium via-white to-electric transition-all duration-1000 ease-out"></div>
+      </div>
+
+      <button id="skip-intro-btn" type="button" class="mt-6 font-mono text-[11px] tracking-[0.25em] text-titanium/70 hover:text-white uppercase transition-colors">
+        [ ENTER HEADQUARTERS ]
+      </button>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       03. IMMERSIVE FLOATING NAVIGATION BAR
+       ===================================================================== -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 py-5 px-4 sm:px-8 lg:px-12">
+    <div id="nav-container" class="max-w-[1440px] mx-auto flex items-center justify-between px-4 sm:px-6 py-3 rounded-xl border border-transparent transition-all duration-500">
+      <!-- Left: 3D Metallic Brand Mark -->
+      <a href="#home" class="flex items-center gap-3.5 group focus:outline-none">
+        <div class="relative w-10 h-10 flex items-center justify-center rounded-lg bg-graphite/90 border border-titanium/25 group-hover:border-electric/70 transition-colors shadow-lg">
+          <svg viewBox="0 0 120 120" class="w-7 h-7">
+            <polygon points="60,8 106,34 106,86 60,112 14,86 14,34" fill="#0B0D10" stroke="#E4E7EA" stroke-width="4" />
+            <path d="M37 83 L37 35 L68 35 C79 35 85 41 85 50 C85 58 79 64 70 66 L87 83 L72 83 L57 67 L49 67 L49 83 Z M49 45 L49 57 L66 57 C70 57 73 54 73 51 C73 47.5 70 45 66 45 Z" fill="#FFFFFF" />
+            <rect x="32" y="90" width="56" height="4" fill="#FF5A1F" />
+          </svg>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-base sm:text-lg tracking-[0.16em] text-white leading-none">
+            RAPTOR
+          </span>
+          <span class="font-mono text-[10px] tracking-[0.28em] text-titanium uppercase mt-1">
+            CUSTOM FABWORX
+          </span>
+        </div>
+      </a>
+
+      <!-- Center: Desktop Navigation -->
+      <nav aria-label="Primary Navigation" class="hidden lg:flex items-center gap-8">
+        <a href="#home" class="nav-link font-mono text-xs tracking-[0.2em] text-platinum/80 hover:text-white transition-colors relative py-1">HOME</a>
+        <a href="#about" class="nav-link font-mono text-xs tracking-[0.2em] text-platinum/80 hover:text-white transition-colors relative py-1">ABOUT</a>
+        <a href="#capabilities" class="nav-link font-mono text-xs tracking-[0.2em] text-platinum/80 hover:text-white transition-colors relative py-1">CAPABILITIES</a>
+        <a href="#projects" class="nav-link font-mono text-xs tracking-[0.2em] text-platinum/80 hover:text-white transition-colors relative py-1">PROJECTS</a>
+        <a href="#approach" class="nav-link font-mono text-xs tracking-[0.2em] text-platinum/80 hover:text-white transition-colors relative py-1">OUR APPROACH</a>
+        <a href="#contact" class="nav-link font-mono text-xs tracking-[0.2em] text-platinum/80 hover:text-white transition-colors relative py-1">CONTACT</a>
+      </nav>
+
+      <!-- Right: Request a Quote CTA + Mobile Animated Menu Button -->
+      <div class="flex items-center gap-3 sm:gap-4">
+        <a href="#quotation" class="magnetic-btn hidden sm:inline-flex items-center gap-2.5 px-5 py-2.5 rounded-lg bg-electric hover:bg-[#ff6d38] text-white font-display font-semibold text-xs tracking-[0.18em] uppercase shadow-[0_0_25px_rgba(255,90,31,0.35)] transition-all">
+          <span>REQUEST A QUOTE</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+          </svg>
+        </a>
+
+        <button id="mobile-menu-toggle" type="button" aria-label="Toggle Menu" aria-expanded="false" class="lg:hidden relative w-11 h-11 rounded-lg bg-graphite/90 border border-titanium/20 flex flex-col items-center justify-center gap-1.5 text-white hover:border-electric transition-colors">
+          <span class="menu-line w-5 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+          <span class="menu-line w-5 h-0.5 bg-electric transition-all duration-300"></span>
+          <span class="menu-line w-5 h-0.5 bg-white transition-all duration-300 origin-center"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div id="mobile-menu-drawer" class="lg:hidden hidden mt-3 mx-auto max-w-[1440px] surface-glass rounded-2xl p-6 border border-titanium/20 shadow-2xl">
+      <div class="flex flex-col space-y-4">
+        <a href="#home" class="mobile-nav-link font-display text-lg tracking-[0.18em] text-white py-2 border-b border-white/10">01 // HOME</a>
+        <a href="#about" class="mobile-nav-link font-display text-lg tracking-[0.18em] text-platinum py-2 border-b border-white/10">02 // ABOUT</a>
+        <a href="#capabilities" class="mobile-nav-link font-display text-lg tracking-[0.18em] text-platinum py-2 border-b border-white/10">03 // CAPABILITIES</a>
+        <a href="#projects" class="mobile-nav-link font-display text-lg tracking-[0.18em] text-platinum py-2 border-b border-white/10">04 // PROJECTS</a>
+        <a href="#approach" class="mobile-nav-link font-display text-lg tracking-[0.18em] text-platinum py-2 border-b border-white/10">05 // OUR APPROACH</a>
+        <a href="#contact" class="mobile-nav-link font-display text-lg tracking-[0.18em] text-platinum py-2 border-b border-white/10">06 // CONTACT</a>
+        <div class="pt-3 flex flex-col sm:flex-row gap-3">
+          <a href="#quotation" class="mobile-nav-link w-full text-center py-3.5 rounded-lg bg-electric text-white font-display font-bold text-xs tracking-[0.2em] uppercase">
+            REQUEST A QUOTE
+          </a>
+          <a href="https://wa.me/27792658508?text=Hello%20RAPTOR%20CUSTOM%20FABWORX%2C%20I%20would%20like%20to%20discuss%20a%20metal%20fabrication%20project." target="_blank" rel="noopener noreferrer" class="mobile-nav-link w-full text-center py-3.5 rounded-lg bg-graphite border border-[#25D366]/50 text-white font-display font-bold text-xs tracking-[0.2em] uppercase">
+            WHATSAPP // 079 265 8508
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="relative z-10">
+    <!-- =====================================================================
+         02. HERO SECTION — CINEMATIC FOUNDRY & ARCHITECTURAL STEEL MOTION STAGE
+         ===================================================================== -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-28 pb-20">
+      <!-- Hero Full-Bleed Slow-Motion Photography Reel -->
+      <div id="hero-photo-reel" class="absolute inset-0 z-0 pointer-events-none overflow-hidden" aria-hidden="true">
+        <img src="https://images.pexels.com/photos/3970340/pexels-photo-3970340.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Industrial Welding Sparks" class="cinema-slide is-active brightness-[0.65] contrast-125" />
+        <img src="https://images.pexels.com/photos/5846146/pexels-photo-5846146.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Precision Metal Grinding" class="cinema-slide brightness-[0.65] contrast-125" />
+        <img src="https://images.pexels.com/photos/28216642/pexels-photo-28216642.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Structural Steel Fabrication" class="cinema-slide brightness-[0.65] contrast-125" />
+        <img src="https://images.pexels.com/photos/38520034/pexels-photo-38520034.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Heavy Industrial Engineering" class="cinema-slide brightness-[0.65] contrast-125" />
+        <img src="https://images.pexels.com/photos/10682523/pexels-photo-10682523.jpeg?auto=compress&cs=tinysrgb&w=1800" alt="Architectural Steel Roof Structure" class="cinema-slide brightness-[0.65] contrast-125" />
+      </div>
+
+      <!-- Real-Time Procedural Industrial Foundry Canvas (Welding Sparks, Molten Steel Glow, Laser Cutting Beams & Architectural Steel) -->
+      <canvas id="hero-foundry-canvas" class="absolute inset-0 w-full h-full pointer-events-none z-[1] mix-blend-screen"></canvas>
+
+      <!-- Cinematic Vignette & Atmospheric Depth Overlays -->
+      <div class="absolute inset-0 bg-gradient-to-b from-obsidian/75 via-obsidian/40 to-obsidian/90 z-[2] pointer-events-none"></div>
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_25%,#080A0C_95%)] z-[2] pointer-events-none"></div>
+
+      <!-- Hero Content Container -->
+      <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12 w-full">
+        <div class="max-w-5xl">
+          <!-- Top Technical Telemetry Tag -->
+          <div class="hero-stagger inline-flex items-center gap-3 px-4 py-2 rounded-full surface-glass border border-titanium/20 mb-8">
+            <span class="w-2 h-2 rounded-full bg-electric animate-pulse"></span>
+            <span class="font-mono text-[11px] sm:text-xs tracking-[0.24em] text-platinum uppercase">
+              VOSLOORUS, GAUTENG // INDUSTRIAL METAL FABRICATION HQ
+            </span>
+          </div>
+
+          <!-- 3D Metallic Brand Badge + Oversized Headline -->
+          <div class="hero-stagger flex items-center gap-4 mb-5">
+            <div class="h-[1px] w-12 sm:w-20 bg-gradient-to-r from-electric to-transparent"></div>
+            <span class="font-display font-semibold text-sm sm:text-base tracking-[0.32em] text-titanium uppercase">
+              RAPTOR CUSTOM FABWORX
+            </span>
+          </div>
+
+          <h1 class="hero-stagger font-display font-bold text-4xl sm:text-6xl md:text-7xl lg:text-[5.5rem] leading-[0.98] tracking-[0.04em] uppercase">
+            <span class="block text-titanium-gradient">ENGINEERING STRENGTH.</span>
+            <span class="block text-chrome-sweep mt-2">CREATING POSSIBILITIES.</span>
+          </h1>
+
+          <p class="hero-stagger mt-7 text-base sm:text-xl md:text-2xl text-platinum/85 font-light max-w-2xl leading-relaxed">
+            Precision Metal Fabrication. Exceptional Craftsmanship. Built for Performance.
+          </p>
+
+          <!-- Primary & Secondary CTAs -->
+          <div class="hero-stagger mt-10 flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5">
+            <a href="#capabilities" class="magnetic-btn inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-electric hover:bg-[#ff6c37] text-white font-display font-bold text-xs sm:text-sm tracking-[0.2em] uppercase shadow-[0_14px_35px_rgba(255,90,31,0.38)] transition-all">
+              <span>EXPLORE OUR CAPABILITIES</span>
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </a>
+
+            <a href="#configurator" class="magnetic-btn inline-flex items-center justify-center gap-3 px-8 py-4 rounded-xl surface-glass hover:border-white/40 text-white font-display font-semibold text-xs sm:text-sm tracking-[0.2em] uppercase transition-all">
+              <span>START YOUR PROJECT</span>
+              <span class="w-2 h-2 rounded-full bg-electric"></span>
+            </a>
+          </div>
+
+          <!-- Cinematic Scene Selector & Telemetry Strip -->
+          <div class="hero-stagger mt-14 pt-6 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-4 max-w-3xl">
+            <button type="button" data-hero-mode="sparks" class="hero-mode-btn text-left p-3 rounded-lg bg-white/[0.04] border border-electric/60 transition-all">
+              <div class="font-mono text-[10px] tracking-[0.22em] text-electric uppercase">PHASE 01 // ARC &amp; SPARK</div>
+              <div class="font-display text-xs tracking-[0.14em] text-white uppercase mt-1">High-Precision Welding</div>
+            </button>
+            <button type="button" data-hero-mode="laser" class="hero-mode-btn text-left p-3 rounded-lg bg-white/[0.02] border border-white/10 hover:border-titanium/40 transition-all">
+              <div class="font-mono text-[10px] tracking-[0.22em] text-titanium uppercase">PHASE 02 // THERMAL CUT</div>
+              <div class="font-display text-xs tracking-[0.14em] text-platinum uppercase mt-1">CNC Steel Profiling</div>
+            </button>
+            <button type="button" data-hero-mode="structure" class="hero-mode-btn text-left p-3 rounded-lg bg-white/[0.02] border border-white/10 hover:border-titanium/40 transition-all">
+              <div class="font-mono text-[10px] tracking-[0.22em] text-titanium uppercase">PHASE 03 // ARCHITECTURE</div>
+              <div class="font-display text-xs tracking-[0.14em] text-platinum uppercase mt-1">Structural Assembly</div>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Scroll Indicator -->
+      <a href="#about" aria-label="Scroll to Engineering Experience" class="absolute bottom-7 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 group">
+        <span class="font-mono text-[10px] tracking-[0.32em] text-titanium group-hover:text-white uppercase transition-colors">SCROLL</span>
+        <div class="w-5 h-9 rounded-full border border-titanium/40 flex justify-center p-1.5">
+          <span class="w-1 h-2 rounded-full bg-electric animate-bounce"></span>
+        </div>
+      </a>
+    </section>
+
+    <!-- =====================================================================
+         04. THE ENGINEERING EXPERIENCE — EDITORIAL SPLIT-SCREEN & PARALLAX
+         ===================================================================== -->
+    <section id="about" class="relative py-24 sm:py-32 lg:py-40 bg-obsidian/80 backdrop-blur-[2px] border-t border-white/[0.07] overflow-hidden">
+      <div class="absolute inset-0 grid-blueprint opacity-35 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+        <!-- Editorial Section Header -->
+        <div class="reveal-up max-w-5xl mb-16 sm:mb-24">
+          <div class="flex items-center gap-3 mb-4">
+            <span class="font-mono text-xs tracking-[0.28em] text-electric uppercase">01 // THE ENGINEERING EXPERIENCE</span>
+            <span class="h-[1px] flex-1 max-w-[120px] bg-titanium/25"></span>
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl lg:text-6xl tracking-[0.04em] leading-[1.06] uppercase text-titanium-gradient">
+            WHERE RAW MATERIALS BECOME ENGINEERED EXCELLENCE.
+          </h2>
+        </div>
+
+        <!-- Split-Screen Editorial Layout with Layered Architectural Steel Visuals -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <!-- Left: Layered Visual Composition -->
+          <div class="lg:col-span-7 relative">
+            <div class="relative rounded-2xl overflow-hidden border border-titanium/20 shadow-[0_30px_70px_rgba(0,0,0,0.85)] group">
+              <!-- High-Contrast Motion Photography Reel -->
+              <div id="editorial-photo-reel" class="aspect-[16/10] w-full bg-graphite relative overflow-hidden">
+                <img src="https://images.pexels.com/photos/28216642/pexels-photo-28216642.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Structural Steel Welding" class="cinema-slide is-active brightness-90 contrast-115" />
+                <img src="https://images.pexels.com/photos/5846146/pexels-photo-5846146.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Precision Metal Grinding" class="cinema-slide brightness-90 contrast-115" />
+                <img src="https://images.pexels.com/photos/10395741/pexels-photo-10395741.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Custom Steel Fabrication" class="cinema-slide brightness-90 contrast-115" />
+                <img src="https://images.pexels.com/photos/38520034/pexels-photo-38520034.jpeg?auto=compress&cs=tinysrgb&w=1400" alt="Industrial Steel Construction" class="cinema-slide brightness-90 contrast-115" />
+
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-transparent to-obsidian/30 pointer-events-none"></div>
+
+                <!-- Technical Caption Overlay -->
+                <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-auto surface-glass px-4 py-3 rounded-xl border border-titanium/20 z-10">
+                  <div class="font-mono text-[10px] tracking-[0.22em] text-electric uppercase">WORKSHOP SPECIFICATION</div>
+                  <div class="font-display text-xs sm:text-sm tracking-[0.12em] text-white uppercase mt-0.5">
+                    BESPOKE STEEL &amp; ARCHITECTURAL METALWORK
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Floating Secondary Detail Plate -->
+            <div class="hidden sm:block absolute -bottom-8 -right-6 w-64 surface-card p-5 rounded-xl border border-titanium/25 shadow-2xl">
+              <div class="font-mono text-[10px] tracking-[0.24em] text-titanium uppercase">HEADQUARTERS</div>
+              <div class="font-display font-semibold text-sm text-white tracking-[0.1em] uppercase mt-1">
+                VOSLOORUS, GAUTENG
+              </div>
+              <p class="text-xs text-platinum/70 mt-2 leading-relaxed">
+                Dedicated fabrication execution tailored directly to client specifications and structural requirements.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Editorial Narrative (Strictly Factual — No Invented Certifications, Years, or Metrics) -->
+          <div class="lg:col-span-5 space-y-6 reveal-up">
+            <div class="inline-block font-mono text-xs tracking-[0.24em] text-titanium uppercase border-l-2 border-electric pl-3">
+              CRAFTED TO SPECIFICATION
+            </div>
+
+            <h3 class="font-display font-bold text-2xl sm:text-3xl text-white tracking-[0.04em] uppercase leading-snug">
+              BUILT AROUND PRECISION, DURABILITY &amp; CLIENT PURPOSE.
+            </h3>
+
+            <p class="text-base sm:text-lg text-platinum/80 leading-relaxed font-light">
+              <strong class="text-white font-semibold">RAPTOR CUSTOM FABWORX</strong> is a dedicated metal fabrication business operating from Vosloorus, Gauteng, South Africa. We transform raw steel and structural metals into custom-built components, architectural assemblies, security metalwork, and heavy-duty fabricated solutions.
+            </p>
+
+            <p class="text-base text-platinum/75 leading-relaxed font-light">
+              Every commission begins with a disciplined focus on workmanship, accurate cutting, clean welding, and direct alignment with your functional and dimensional requirements. Whether producing a single bespoke piece or fabricating structural steel elements, our focus remains constant: reliable execution and lasting structural integrity.
+            </p>
+
+            <!-- Core Pillars Strip -->
+            <div class="pt-4 grid grid-cols-2 gap-4 border-t border-white/10">
+              <div class="p-4 rounded-xl bg-graphite/60 border border-white/[0.06]">
+                <div class="font-mono text-[10px] tracking-[0.2em] text-electric uppercase">APPROACH</div>
+                <div class="font-display font-semibold text-sm text-white uppercase mt-1 tracking-wider">Custom-Built To Order</div>
+              </div>
+              <div class="p-4 rounded-xl bg-graphite/60 border border-white/[0.06]">
+                <div class="font-mono text-[10px] tracking-[0.2em] text-electric uppercase">EXECUTION</div>
+                <div class="font-display font-semibold text-sm text-white uppercase mt-1 tracking-wider">Precision &amp; Clean Finish</div>
+              </div>
+            </div>
+
+            <div class="pt-2">
+              <a href="#quotation" class="inline-flex items-center gap-3 font-display font-semibold text-xs tracking-[0.22em] text-white hover:text-electric uppercase transition-colors group">
+                <span>DISCUSS YOUR FABRICATION REQUIREMENTS</span>
+                <svg class="w-4 h-4 transform group-hover:translate-x-1.5 transition-transform text-electric" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         05. OUR CAPABILITIES — PREMIUM INTERACTIVE & EDITABLE SERVICE SHOWCASE
+         ===================================================================== -->
+    <section id="capabilities" class="relative py-24 sm:py-32 bg-[#0A0D10]/85 backdrop-blur-[2px] border-t border-white/[0.07]">
+      <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+        <!-- Header + Editable Catalogue Toggle -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-14 reveal-up">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-mono text-xs tracking-[0.28em] text-electric uppercase">02 // OUR CAPABILITIES</span>
+              <span class="h-[1px] w-16 bg-titanium/25"></span>
+            </div>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl lg:text-6xl tracking-[0.04em] uppercase text-titanium-gradient">
+              ENGINEERED FABRICATION DIVISIONS.
+            </h2>
+          </div>
+
+          <div class="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+            <span class="font-mono text-[11px] text-titanium/70 tracking-wider">
+              PROPOSED SERVICE CATEGORIES — CONFIGURABLE
+            </span>
+            <button id="toggle-edit-services" type="button" class="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg surface-glass border border-titanium/25 hover:border-electric text-xs font-mono tracking-[0.16em] text-white uppercase transition-all">
+              <svg class="w-3.5 h-3.5 text-electric" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z" />
+              </svg>
+              <span id="edit-services-label">CUSTOMIZE SERVICES</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Edit Mode Banner (Visible when editing services) -->
+        <div id="edit-services-banner" class="hidden mb-8 p-4 rounded-xl bg-electric/10 border border-electric/40 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+          <div class="text-xs sm:text-sm text-platinum">
+            <strong class="text-white font-display tracking-wider uppercase">Service Catalogue Editor Active:</strong> Click any card title or description below to tailor the services to Raptor Custom FabWorx's exact workshop offerings. Changes save automatically in your browser.
+          </div>
+          <button id="reset-services-btn" type="button" class="px-3.5 py-2 rounded-lg bg-graphite border border-white/20 text-xs font-mono tracking-wider text-white hover:border-electric uppercase shrink-0">
+            RESET DEFAULTS
+          </button>
+        </div>
+
+        <!-- 9 Interactive Capability Cards Grid -->
+        <div id="capabilities-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7">
+          <!-- Populated dynamically via JS for live editing & instant quote selection -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         06. THE PROJECT GALLERY — ARCHITECTURAL PORTFOLIO & BEFORE/AFTER
+         ===================================================================== -->
+    <section id="projects" class="relative py-24 sm:py-32 bg-obsidian/80 backdrop-blur-[2px] border-t border-white/[0.07]">
+      <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+        <!-- Header & Transparency Badge -->
+        <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-6 mb-12 reveal-up">
+          <div>
+            <div class="flex items-center gap-3 mb-3">
+              <span class="font-mono text-xs tracking-[0.28em] text-electric uppercase">03 // PROJECT PORTFOLIO</span>
+              <span class="h-[1px] w-16 bg-titanium/25"></span>
+            </div>
+            <h2 class="font-display font-bold text-3xl sm:text-5xl lg:text-6xl tracking-[0.04em] uppercase text-titanium-gradient">
+              ARCHITECTURAL &amp; INDUSTRIAL SHOWCASE.
+            </h2>
+          </div>
+
+          <div class="surface-glass px-4 py-3 rounded-xl border border-titanium/20 max-w-md">
+            <div class="font-mono text-[10px] tracking-[0.2em] text-electric uppercase">VISUAL DISCLOSURE</div>
+            <p class="text-xs text-platinum/75 mt-1 leading-relaxed">
+              Concept &amp; capability visualisations below illustrate fabrication scopes. Completed client project photographs are explicitly labelled upon upload.
+            </p>
+          </div>
+        </div>
+
+        <!-- Category Filter Bar -->
+        <div class="flex flex-wrap items-center gap-2.5 mb-10" role="tablist" aria-label="Project Categories">
+          <button type="button" data-filter="ALL" class="project-filter-btn px-4 py-2.5 rounded-lg bg-electric text-white font-mono text-xs tracking-[0.18em] uppercase transition-all">ALL SCOPES</button>
+          <button type="button" data-filter="Steel Fabrication" class="project-filter-btn px-4 py-2.5 rounded-lg surface-glass text-platinum hover:text-white font-mono text-xs tracking-[0.18em] uppercase transition-all">STEEL FABRICATION</button>
+          <button type="button" data-filter="Custom Metalwork" class="project-filter-btn px-4 py-2.5 rounded-lg surface-glass text-platinum hover:text-white font-mono text-xs tracking-[0.18em] uppercase transition-all">CUSTOM METALWORK</button>
+          <button type="button" data-filter="Welding" class="project-filter-btn px-4 py-2.5 rounded-lg surface-glass text-platinum hover:text-white font-mono text-xs tracking-[0.18em] uppercase transition-all">WELDING</button>
+          <button type="button" data-filter="Industrial Components" class="project-filter-btn px-4 py-2.5 rounded-lg surface-glass text-platinum hover:text-white font-mono text-xs tracking-[0.18em] uppercase transition-all">INDUSTRIAL COMPONENTS</button>
+          <button type="button" data-filter="Structural Fabrication" class="project-filter-btn px-4 py-2.5 rounded-lg surface-glass text-platinum hover:text-white font-mono text-xs tracking-[0.18em] uppercase transition-all">STRUCTURAL FABRICATION</button>
+        </div>
+
+        <!-- Interactive Before-and-After Engineering Transformation Showcase -->
+        <div class="mb-14 surface-card rounded-2xl p-6 sm:p-8 border border-titanium/20">
+          <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 mb-6">
+            <div>
+              <span class="font-mono text-[11px] tracking-[0.24em] text-electric uppercase">INTERACTIVE TRANSFORMATION INSPECTOR</span>
+              <h3 class="font-display font-bold text-xl sm:text-2xl text-white uppercase tracking-wide mt-1">
+                RAW STEEL PROFILE TO FINISHED STRUCTURAL ASSEMBLY
+              </h3>
+            </div>
+            <div class="font-mono text-xs text-titanium">
+              DRAG SLIDER TO COMPARE RAW STOCK VS. PRECISION FABRICATION
+            </div>
+          </div>
+
+          <div id="ba-container" class="relative w-full h-72 sm:h-96 lg:h-[440px] rounded-xl overflow-hidden select-none border border-white/10 cursor-ew-resize">
+            <!-- AFTER LAYER (Finished Engineered Steel Assembly) -->
+            <div class="absolute inset-0 bg-[#11151B]">
+              <img src="https://images.pexels.com/photos/10682523/pexels-photo-10682523.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Completed Structural Steel Frame" class="w-full h-full object-cover brightness-90 contrast-115" />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian/85 via-obsidian/20 to-obsidian/40"></div>
+              <div class="absolute bottom-5 left-5 right-5 font-mono text-xs sm:text-sm tracking-[0.22em] text-white uppercase drop-shadow">
+                COMPLETED STRUCTURAL FRAME // FABRICATED, WELDED &amp; INSTALLED
+              </div>
+              <span class="absolute top-4 right-4 px-3 py-1.5 rounded bg-electric text-white font-mono text-[11px] tracking-[0.2em] uppercase shadow-lg">
+                AFTER // ENGINEERED FINISH
+              </span>
+            </div>
+
+            <!-- BEFORE LAYER (Raw Uncut Steel & Fabrication Prep) -->
+            <div id="ba-before-layer" class="absolute inset-0 bg-[#171A1E] overflow-hidden" style="width: 50%;">
+              <img src="https://images.pexels.com/photos/38520034/pexels-photo-38520034.jpeg?auto=compress&cs=tinysrgb&w=1600" alt="Raw Steel Site Preparation" class="w-full h-full max-w-none object-cover grayscale contrast-125 brightness-75" style="width: 100vw; max-width: 1340px;" />
+              <div class="absolute inset-0 bg-obsidian/45"></div>
+              <div class="absolute bottom-5 left-5 font-mono text-xs sm:text-sm tracking-[0.22em] text-titanium uppercase whitespace-nowrap">
+                BEFORE // RAW STEEL STOCK &amp; SITE PREPARATION
+              </div>
+              <span class="absolute top-4 left-4 px-3 py-1.5 rounded bg-obsidian/90 border border-titanium/30 text-titanium font-mono text-[11px] tracking-[0.2em] uppercase">
+                BEFORE // RAW MATERIAL
+              </span>
+            </div>
+
+            <!-- Vertical Handle -->
+            <div id="ba-handle" class="absolute top-0 bottom-0 w-0.5 bg-electric shadow-[0_0_20px_#FF5A1F]" style="left: 50%;">
+              <div class="absolute top-1/2 -translate-y-1/2 -translate-x-1/2 w-11 h-11 rounded-full bg-obsidian border-2 border-electric flex items-center justify-center text-white shadow-2xl">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l-4 3 4 3m8-6l4 3-4 3" />
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Portfolio Grid -->
+        <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7">
+          <!-- Rendered dynamically by JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         07. THE 3D ENGINEERING SHOWCASE — INTERACTIVE THREE.JS CAD STUDIO
+         ===================================================================== -->
+    <section id="showcase-3d" class="relative py-24 sm:py-32 bg-[#07090B]/85 backdrop-blur-[2px] border-t border-white/[0.07] overflow-hidden">
+      <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <!-- Left Controls & Engineering Telemetry -->
+          <div class="lg:col-span-4 space-y-6 reveal-up">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs tracking-[0.28em] text-electric uppercase">04 // INTERACTIVE 3D CAD</span>
+            </div>
+
+            <h2 class="font-display font-bold text-3xl sm:text-5xl tracking-[0.04em] uppercase text-titanium-gradient leading-[1.06]">
+              3D METALLIC ASSEMBLY INSPECTOR.
+            </h2>
+
+            <p class="text-sm sm:text-base text-platinum/75 leading-relaxed font-light">
+              Interact directly with precision-engineered steel geometries. Drag to orbit in 360°, switch structural assemblies, or toggle blueprint wireframe mode to inspect joint geometry.
+            </p>
+
+            <!-- Assembly Switcher -->
+            <div class="space-y-2.5 pt-2">
+              <div class="font-mono text-[10px] tracking-[0.24em] text-titanium uppercase">SELECT STEEL ASSEMBLY</div>
+              <div class="grid grid-cols-1 gap-2.5">
+                <button type="button" data-model="ibeam" class="model-select-btn flex items-center justify-between px-4 py-3.5 rounded-xl bg-electric/15 border border-electric text-left transition-all">
+                  <div>
+                    <div class="font-display font-semibold text-xs tracking-[0.16em] text-white uppercase">01 // STRUCTURAL I-BEAM NODE</div>
+                    <div class="font-mono text-[10px] text-titanium mt-0.5">Heavy Gusset &amp; Bolted Flange Joint</div>
+                  </div>
+                  <span class="w-2 h-2 rounded-full bg-electric"></span>
+                </button>
+
+                <button type="button" data-model="truss" class="model-select-btn flex items-center justify-between px-4 py-3.5 rounded-xl surface-glass border border-white/10 hover:border-titanium/40 text-left transition-all">
+                  <div>
+                    <div class="font-display font-semibold text-xs tracking-[0.16em] text-white uppercase">02 // ARCHITECTURAL SPACE TRUSS</div>
+                    <div class="font-mono text-[10px] text-titanium mt-0.5">Span Load-Bearing Steel Frame</div>
+                  </div>
+                  <span class="w-2 h-2 rounded-full bg-titanium/40"></span>
+                </button>
+
+                <button type="button" data-model="gate" class="model-select-btn flex items-center justify-between px-4 py-3.5 rounded-xl surface-glass border border-white/10 hover:border-titanium/40 text-left transition-all">
+                  <div>
+                    <div class="font-display font-semibold text-xs tracking-[0.16em] text-white uppercase">03 // REINFORCED SECURITY GATE FRAME</div>
+                    <div class="font-mono text-[10px] text-titanium mt-0.5">Custom Vertical Bar &amp; Box Section</div>
+                  </div>
+                  <span class="w-2 h-2 rounded-full bg-titanium/40"></span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Wireframe & Auto-Rotate Toggles -->
+            <div class="flex flex-wrap gap-3 pt-2">
+              <button id="toggle-wireframe-btn" type="button" class="px-4 py-2.5 rounded-lg surface-glass border border-titanium/25 hover:border-electric font-mono text-xs tracking-[0.16em] text-white uppercase transition-all">
+                CAD WIREFRAME: OFF
+              </button>
+              <button id="toggle-autorotate-btn" type="button" class="px-4 py-2.5 rounded-lg surface-glass border border-titanium/25 hover:border-electric font-mono text-xs tracking-[0.16em] text-white uppercase transition-all">
+                AUTO-ORBIT: ON
+              </button>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Three.js Viewport -->
+          <div class="lg:col-span-8">
+            <div class="relative rounded-2xl overflow-hidden surface-card border border-titanium/25 h-[380px] sm:h-[480px] lg:h-[540px]">
+              <canvas id="three-engineering-canvas" class="w-full h-full block cursor-grab active:cursor-grabbing"></canvas>
+
+              <!-- HUD Overlay -->
+              <div class="absolute top-4 left-4 right-4 flex items-center justify-between pointer-events-none">
+                <div class="px-3.5 py-1.5 rounded-lg bg-obsidian/80 border border-white/10 font-mono text-[10px] tracking-[0.2em] text-titanium uppercase">
+                  RENDER // BRUSHED TITANIUM &amp; STRUCTURAL STEEL
+                </div>
+                <div class="hidden sm:block px-3.5 py-1.5 rounded-lg bg-obsidian/80 border border-electric/30 font-mono text-[10px] tracking-[0.2em] text-electric uppercase">
+                  DRAG TO ROTATE 360°
+                </div>
+              </div>
+
+              <div class="absolute bottom-4 left-4 right-4 flex flex-wrap items-center justify-between gap-2 pointer-events-none">
+                <span id="three-model-caption" class="font-mono text-[11px] tracking-[0.18em] text-platinum/80 bg-obsidian/80 px-3.5 py-1.5 rounded-lg border border-white/10">
+                  ACTIVE ASSEMBLY: STRUCTURAL I-BEAM NODE
+                </span>
+                <a href="#configurator" class="pointer-events-auto px-4 py-1.5 rounded-lg bg-electric text-white font-display font-semibold text-[11px] tracking-[0.18em] uppercase hover:bg-[#ff6d38] transition-colors">
+                  CONFIGURE SIMILAR BUILD
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         08. WHY RAPTOR CUSTOM FABWORX — SIX ENGINEERING PRINCIPLES
+         ===================================================================== -->
+    <section class="relative py-24 sm:py-32 bg-obsidian/80 backdrop-blur-[2px] border-t border-white/[0.07]">
+      <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-4xl mb-16 reveal-up">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-mono text-xs tracking-[0.28em] text-electric uppercase">05 // CORE PRINCIPLES</span>
+            <span class="h-[1px] w-16 bg-titanium/25"></span>
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl lg:text-6xl tracking-[0.04em] uppercase text-titanium-gradient leading-[1.06]">
+            BUILT ON PRECISION. DEFINED BY QUALITY.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Principle 1 -->
+          <div class="metallic-card surface-card p-8 rounded-2xl group hover:border-electric/50 transition-all duration-500">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded-xl bg-electric/10 border border-electric/30 flex items-center justify-center text-electric group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m9-9H3m15.364-6.364l-12.728 12.728m0-12.728l12.728 12.728" />
+                </svg>
+              </div>
+              <span class="font-mono text-xs text-titanium/50">01</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white uppercase tracking-wider mb-3">Precision Craftsmanship</h3>
+            <p class="text-sm text-platinum/75 leading-relaxed font-light">
+              Exact measurement, square alignment, and disciplined metalworking practices ensure every component fits and performs as intended.
+            </p>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="metallic-card surface-card p-8 rounded-2xl group hover:border-electric/50 transition-all duration-500">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded-xl bg-electric/10 border border-electric/30 flex items-center justify-center text-electric group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <span class="font-mono text-xs text-titanium/50">02</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white uppercase tracking-wider mb-3">Quality-Focused Workmanship</h3>
+            <p class="text-sm text-platinum/75 leading-relaxed font-light">
+              Clean weld seams, thorough surface preparation, and consistent material selection across structural and custom projects.
+            </p>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="metallic-card surface-card p-8 rounded-2xl group hover:border-electric/50 transition-all duration-500">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded-xl bg-electric/10 border border-electric/30 flex items-center justify-center text-electric group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                </svg>
+              </div>
+              <span class="font-mono text-xs text-titanium/50">03</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white uppercase tracking-wider mb-3">Custom Fabrication</h3>
+            <p class="text-sm text-platinum/75 leading-relaxed font-light">
+              Bespoke metal fabrication built directly around your site dimensions, load requirements, and functional design goals.
+            </p>
+          </div>
+
+          <!-- Principle 4 -->
+          <div class="metallic-card surface-card p-8 rounded-2xl group hover:border-electric/50 transition-all duration-500">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded-xl bg-electric/10 border border-electric/30 flex items-center justify-center text-electric group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                </svg>
+              </div>
+              <span class="font-mono text-xs text-titanium/50">04</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white uppercase tracking-wider mb-3">Attention to Detail</h3>
+            <p class="text-sm text-platinum/75 leading-relaxed font-light">
+              From bevel angles and joint reinforcement to smooth edge finishing, every detail is inspected before handover.
+            </p>
+          </div>
+
+          <!-- Principle 5 -->
+          <div class="metallic-card surface-card p-8 rounded-2xl group hover:border-electric/50 transition-all duration-500">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded-xl bg-electric/10 border border-electric/30 flex items-center justify-center text-electric group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </div>
+              <span class="font-mono text-xs text-titanium/50">05</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white uppercase tracking-wider mb-3">Professional Service</h3>
+            <p class="text-sm text-platinum/75 leading-relaxed font-light">
+              Clear communication, transparent scoping, and direct engagement with clients across Vosloorus and Gauteng.
+            </p>
+          </div>
+
+          <!-- Principle 6 -->
+          <div class="metallic-card surface-card p-8 rounded-2xl group hover:border-electric/50 transition-all duration-500">
+            <div class="flex items-center justify-between mb-6">
+              <div class="w-12 h-12 rounded-xl bg-electric/10 border border-electric/30 flex items-center justify-center text-electric group-hover:scale-110 transition-transform">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                </svg>
+              </div>
+              <span class="font-mono text-xs text-titanium/50">06</span>
+            </div>
+            <h3 class="font-display font-bold text-xl text-white uppercase tracking-wider mb-3">Durable Solutions</h3>
+            <p class="text-sm text-platinum/75 leading-relaxed font-light">
+              Engineered using robust steel grades and protective finishes designed to withstand demanding industrial and outdoor conditions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         09. OUR PROCESS — FUTURISTIC HORIZONTAL TIMELINE
+         ===================================================================== -->
+    <section id="approach" class="relative py-24 sm:py-32 bg-[#0A0D10]/85 backdrop-blur-[2px] border-t border-white/[0.07] overflow-hidden">
+      <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-4xl mb-16 reveal-up">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-mono text-xs tracking-[0.28em] text-electric uppercase">06 // OUR APPROACH</span>
+            <span class="h-[1px] w-16 bg-titanium/25"></span>
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl lg:text-6xl tracking-[0.04em] uppercase text-titanium-gradient">
+            FOUR-STAGE FABRICATION EXECUTION.
+          </h2>
+        </div>
+
+        <!-- Connected Metallic Progress Line -->
+        <div class="relative">
+          <div class="hidden lg:block absolute top-11 left-0 right-0 h-[2px] bg-white/10">
+            <div id="timeline-progress-bar" class="h-full w-0 bg-gradient-to-r from-titanium via-electric to-white transition-all duration-1000"></div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-7 relative z-10">
+            <!-- Step 01 -->
+            <div class="surface-card p-7 rounded-2xl border border-titanium/20 hover:border-electric transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-obsidian border border-electric flex items-center justify-center font-display font-bold text-sm text-electric mb-6 shadow-[0_0_20px_rgba(255,90,31,0.25)]">
+                01
+              </div>
+              <div class="font-mono text-[11px] tracking-[0.26em] text-titanium uppercase">STAGE ONE</div>
+              <h3 class="font-display font-bold text-2xl text-white uppercase tracking-wider mt-1 mb-3">
+                01 — DISCOVER
+              </h3>
+              <p class="text-sm text-platinum/75 leading-relaxed font-light">
+                Understand the client's requirements, operational environment, dimensions, and intended application.
+              </p>
+            </div>
+
+            <!-- Step 02 -->
+            <div class="surface-card p-7 rounded-2xl border border-titanium/20 hover:border-electric transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-obsidian border border-titanium/40 group-hover:border-electric flex items-center justify-center font-display font-bold text-sm text-white mb-6 transition-colors">
+                02
+              </div>
+              <div class="font-mono text-[11px] tracking-[0.26em] text-titanium uppercase">STAGE TWO</div>
+              <h3 class="font-display font-bold text-2xl text-white uppercase tracking-wider mt-1 mb-3">
+                02 — PLAN
+              </h3>
+              <p class="text-sm text-platinum/75 leading-relaxed font-light">
+                Discuss the proposed fabrication solution, material profiles, structural layout, and formal quotation scope.
+              </p>
+            </div>
+
+            <!-- Step 03 -->
+            <div class="surface-card p-7 rounded-2xl border border-titanium/20 hover:border-electric transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-obsidian border border-titanium/40 group-hover:border-electric flex items-center justify-center font-display font-bold text-sm text-white mb-6 transition-colors">
+                03
+              </div>
+              <div class="font-mono text-[11px] tracking-[0.26em] text-titanium uppercase">STAGE THREE</div>
+              <h3 class="font-display font-bold text-2xl text-white uppercase tracking-wider mt-1 mb-3">
+                03 — FABRICATE
+              </h3>
+              <p class="text-sm text-platinum/75 leading-relaxed font-light">
+                Carry out the agreed fabrication work with precision cutting, structural welding, and quality inspection.
+              </p>
+            </div>
+
+            <!-- Step 04 -->
+            <div class="surface-card p-7 rounded-2xl border border-titanium/20 hover:border-electric transition-all group">
+              <div class="w-12 h-12 rounded-xl bg-obsidian border border-titanium/40 group-hover:border-electric flex items-center justify-center font-display font-bold text-sm text-white mb-6 transition-colors">
+                04
+              </div>
+              <div class="font-mono text-[11px] tracking-[0.26em] text-titanium uppercase">STAGE FOUR</div>
+              <h3 class="font-display font-bold text-2xl text-white uppercase tracking-wider mt-1 mb-3">
+                04 — DELIVER
+              </h3>
+              <p class="text-sm text-platinum/75 leading-relaxed font-light">
+                Complete and hand over the finished project ready for installation or immediate operational deployment.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         10. THE PROJECT CONFIGURATOR — INTERACTIVE SPECIFICATION BUILDER
+         ===================================================================== -->
+    <section id="configurator" class="relative py-24 sm:py-32 bg-obsidian/80 backdrop-blur-[2px] border-t border-white/[0.07]">
+      <div class="absolute inset-0 grid-blueprint opacity-25 pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-4xl mb-14 reveal-up">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-mono text-xs tracking-[0.28em] text-electric uppercase">07 // INTERACTIVE CONFIGURATOR</span>
+            <span class="h-[1px] w-16 bg-titanium/25"></span>
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl lg:text-6xl tracking-[0.04em] uppercase text-titanium-gradient">
+            CONFIGURE YOUR FABRICATION BRIEF.
+          </h2>
+          <p class="mt-4 text-base text-platinum/75 font-light max-w-2xl">
+            Specify your fabrication parameters below to generate an instant structured engineering brief. All formal quotations are reviewed and confirmed directly by RAPTOR CUSTOM FABWORX.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+          <!-- Left: Interactive Controls (7 cols) -->
+          <div class="lg:col-span-7 surface-card p-6 sm:p-8 rounded-2xl border border-titanium/20 space-y-6">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+              <!-- Type of Fabrication -->
+              <div>
+                <label for="cfg-type" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                  01 // TYPE OF FABRICATION
+                </label>
+                <select id="cfg-type" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white text-sm focus:border-electric focus:outline-none">
+                  <option value="Custom Metal Fabrication">Custom Metal Fabrication</option>
+                  <option value="Structural Steel Fabrication">Structural Steel Fabrication</option>
+                  <option value="Professional Welding Services">Professional Welding Services</option>
+                  <option value="Metal Cutting and Shaping">Metal Cutting and Shaping</option>
+                  <option value="Custom Steel Structures">Custom Steel Structures</option>
+                  <option value="Metal Gates and Security Solutions">Metal Gates and Security Solutions</option>
+                  <option value="Metal Frames and Components">Metal Frames and Components</option>
+                  <option value="Metal Repairs and Maintenance">Metal Repairs and Maintenance</option>
+                  <option value="Bespoke Fabrication Solutions">Bespoke Fabrication Solutions</option>
+                </select>
+              </div>
+
+              <!-- Project Category -->
+              <div>
+                <label for="cfg-category" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                  02 // PROJECT CATEGORY
+                </label>
+                <select id="cfg-category" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white text-sm focus:border-electric focus:outline-none">
+                  <option value="Industrial / Commercial">Industrial / Commercial</option>
+                  <option value="Architectural / Structural">Architectural / Structural</option>
+                  <option value="Residential Security & Gates">Residential Security &amp; Gates</option>
+                  <option value="Workshop Repair / Modification">Workshop Repair / Modification</option>
+                  <option value="Custom Component Batch">Custom Component Batch</option>
+                </select>
+              </div>
+
+              <!-- Material Requirements -->
+              <div>
+                <label for="cfg-material" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                  03 // MATERIAL REQUIREMENTS
+                </label>
+                <select id="cfg-material" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white text-sm focus:border-electric focus:outline-none">
+                  <option value="Mild Steel (Structural / Plate)">Mild Steel (Structural / Plate)</option>
+                  <option value="Stainless Steel">Stainless Steel</option>
+                  <option value="Galvanised Steel">Galvanised Steel</option>
+                  <option value="Aluminium">Aluminium</option>
+                  <option value="To Be Advised by Raptor Custom FabWorx">To Be Advised by Raptor Custom FabWorx</option>
+                </select>
+              </div>
+
+              <!-- Project Dimensions -->
+              <div>
+                <label for="cfg-dimensions" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                  04 // APPROXIMATE DIMENSIONS
+                </label>
+                <input id="cfg-dimensions" type="text" placeholder="e.g. 6000mm x 2400mm x 3000mm" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white placeholder-titanium/40 text-sm focus:border-electric focus:outline-none" />
+              </div>
+
+              <!-- Estimated Budget Range (Qualitative / Client-Defined — Never Fabricated Pricing) -->
+              <div>
+                <label for="cfg-budget" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                  05 // BUDGET EXPECTATION
+                </label>
+                <select id="cfg-budget" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white text-sm focus:border-electric focus:outline-none">
+                  <option value="Request Formal Quotation">Request Formal Quotation (Confirm with Business)</option>
+                  <option value="Small-Scale / Repair Scope">Small-Scale / Repair Scope</option>
+                  <option value="Mid-Scale Custom Fabrication">Mid-Scale Custom Fabrication</option>
+                  <option value="Large Structural / Commercial Scope">Large Structural / Commercial Scope</option>
+                </select>
+              </div>
+
+              <!-- Project Location -->
+              <div>
+                <label for="cfg-location" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                  06 // PROJECT LOCATION
+                </label>
+                <input id="cfg-location" type="text" value="Vosloorus, Gauteng" placeholder="City / Suburb / Site Address" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white placeholder-titanium/40 text-sm focus:border-electric focus:outline-none" />
+              </div>
+            </div>
+
+            <!-- Additional Specifications -->
+            <div>
+              <label for="cfg-specs" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                07 // PROJECT DESCRIPTION &amp; TECHNICAL SPECIFICATIONS
+              </label>
+              <textarea id="cfg-specs" rows="3" placeholder="Describe finish preferences, load requirements, quantities, or site installation notes..." class="w-full px-4 py-3 rounded-xl bg-obsidian border border-titanium/25 text-white placeholder-titanium/40 text-sm focus:border-electric focus:outline-none"></textarea>
+            </div>
+
+            <!-- Reference Photographs Attachment -->
+            <div>
+              <label for="cfg-files" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                08 // ATTACH REFERENCE PHOTOGRAPHS / DRAWINGS
+              </label>
+              <input id="cfg-files" type="file" multiple accept="image/*,.pdf,.dwg,.dxf" class="w-full text-xs text-titanium file:mr-4 file:py-2.5 file:px-4 file:rounded-lg file:border-0 file:font-mono file:text-xs file:uppercase file:tracking-wider file:bg-graphite file:text-white hover:file:bg-electric file:transition-colors cursor-pointer bg-obsidian border border-titanium/25 rounded-xl p-2" />
+              <div id="cfg-file-list" class="mt-2 font-mono text-[11px] text-electric"></div>
+            </div>
+          </div>
+
+          <!-- Right: Live Engineering Dossier Summary (5 cols) -->
+          <div class="lg:col-span-5 surface-card p-6 sm:p-8 rounded-2xl border border-electric/35 sticky top-28">
+            <div class="flex items-center justify-between pb-4 border-b border-white/10">
+              <div>
+                <span class="font-mono text-[10px] tracking-[0.24em] text-electric uppercase">LIVE SPECIFICATION BRIEF</span>
+                <h3 class="font-display font-bold text-xl text-white uppercase tracking-wider mt-0.5">
+                  ENQUIRY DOSSIER
+                </h3>
+              </div>
+              <span class="px-2.5 py-1 rounded bg-electric/15 border border-electric/40 font-mono text-[10px] text-electric uppercase">
+                QUOTE ON REVIEW
+              </span>
+            </div>
+
+            <dl class="mt-5 space-y-3.5 text-sm">
+              <div class="flex justify-between gap-4 border-b border-white/[0.06] pb-2.5">
+                <dt class="font-mono text-xs text-titanium uppercase">Fabrication:</dt>
+                <dd id="sum-type" class="text-white font-medium text-right">Custom Metal Fabrication</dd>
+              </div>
+              <div class="flex justify-between gap-4 border-b border-white/[0.06] pb-2.5">
+                <dt class="font-mono text-xs text-titanium uppercase">Category:</dt>
+                <dd id="sum-category" class="text-white font-medium text-right">Industrial / Commercial</dd>
+              </div>
+              <div class="flex justify-between gap-4 border-b border-white/[0.06] pb-2.5">
+                <dt class="font-mono text-xs text-titanium uppercase">Material:</dt>
+                <dd id="sum-material" class="text-white font-medium text-right">Mild Steel (Structural / Plate)</dd>
+              </div>
+              <div class="flex justify-between gap-4 border-b border-white/[0.06] pb-2.5">
+                <dt class="font-mono text-xs text-titanium uppercase">Dimensions:</dt>
+                <dd id="sum-dimensions" class="text-white font-medium text-right">To be confirmed</dd>
+              </div>
+              <div class="flex justify-between gap-4 border-b border-white/[0.06] pb-2.5">
+                <dt class="font-mono text-xs text-titanium uppercase">Budget Scope:</dt>
+                <dd id="sum-budget" class="text-white font-medium text-right">Request Formal Quotation</dd>
+              </div>
+              <div class="flex justify-between gap-4 border-b border-white/[0.06] pb-2.5">
+                <dt class="font-mono text-xs text-titanium uppercase">Location:</dt>
+                <dd id="sum-location" class="text-white font-medium text-right">Vosloorus, Gauteng</dd>
+              </div>
+              <div class="border-b border-white/[0.06] pb-2.5">
+                <dt class="font-mono text-xs text-titanium uppercase mb-1">Specifications:</dt>
+                <dd id="sum-specs" class="text-platinum/80 text-xs leading-relaxed">No additional notes specified yet.</dd>
+              </div>
+              <div>
+                <dt class="font-mono text-xs text-titanium uppercase mb-1">Attachments:</dt>
+                <dd id="sum-files" class="text-platinum/80 text-xs">None attached</dd>
+              </div>
+            </dl>
+
+            <div class="mt-5 p-3.5 rounded-xl bg-obsidian/90 border border-white/10 text-[11px] text-titanium leading-relaxed">
+              <strong class="text-white">Pricing Notice:</strong> No automated estimates are generated. All quotations are accurately calculated and confirmed directly by <span class="text-white">RAPTOR CUSTOM FABWORX</span>.
+            </div>
+
+            <div class="mt-6 flex flex-col gap-3">
+              <button id="transfer-to-quote-btn" type="button" class="w-full py-4 rounded-xl bg-electric hover:bg-[#ff6d38] text-white font-display font-bold text-xs tracking-[0.2em] uppercase shadow-[0_10px_30px_rgba(255,90,31,0.35)] transition-all">
+                PROCEED TO FORMAL QUOTATION
+              </button>
+              <a id="cfg-whatsapp-btn" href="https://wa.me/27792658508" target="_blank" rel="noopener noreferrer" class="w-full py-3.5 rounded-xl bg-graphite hover:bg-[#22272E] border border-titanium/30 text-white font-display font-semibold text-xs tracking-[0.2em] uppercase text-center transition-all flex items-center justify-center gap-2.5">
+                <span class="w-2 h-2 rounded-full bg-[#25D366]"></span>
+                <span>SEND BRIEF VIA WHATSAPP</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         11. THE PREMIUM QUOTATION EXPERIENCE — FULL-SCREEN ENQUIRY TERMINAL
+         ===================================================================== -->
+    <section id="quotation" class="relative py-24 sm:py-32 bg-[#0A0D10]/85 backdrop-blur-[2px] border-t border-white/[0.07]">
+      <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+          <!-- Left Editorial Column -->
+          <div class="lg:col-span-5 space-y-6 reveal-up">
+            <div class="flex items-center gap-3">
+              <span class="font-mono text-xs tracking-[0.28em] text-electric uppercase">08 // DIRECT QUOTATION</span>
+            </div>
+
+            <h2 class="font-display font-bold text-4xl sm:text-5xl lg:text-6xl tracking-[0.04em] uppercase text-titanium-gradient leading-[1.04]">
+              LET'S BUILD SOMETHING EXCEPTIONAL.
+            </h2>
+
+            <p class="text-base text-platinum/75 font-light leading-relaxed">
+              Submit your project details below or connect immediately via WhatsApp to discuss drawings, site measurements, and fabrication timelines with our team in Vosloorus.
+            </p>
+
+            <!-- Direct WhatsApp Engineering Desk Card -->
+            <div class="surface-card p-6 rounded-2xl border border-titanium/20 space-y-4">
+              <div class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-xl bg-[#25D366]/15 border border-[#25D366]/40 flex items-center justify-center text-[#25D366]">
+                  <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824z"/>
+                  </svg>
+                </div>
+                <div>
+                  <div class="font-mono text-[10px] tracking-[0.22em] text-titanium uppercase">DIRECT WHATSAPP LINE</div>
+                  <div class="font-display font-bold text-lg text-white tracking-wider">079 265 8508</div>
+                </div>
+              </div>
+              <p class="text-xs text-platinum/70 leading-relaxed">
+                Your form details automatically prepopulate your WhatsApp message so you can send photos, sketches, and specifications in seconds.
+              </p>
+              <a id="quote-whatsapp-direct" href="https://wa.me/27792658508?text=Hello%20RAPTOR%20CUSTOM%20FABWORX%2C%20I%20would%20like%20to%20discuss%20a%20metal%20fabrication%20project." target="_blank" rel="noopener noreferrer" class="w-full py-3.5 px-5 rounded-xl bg-[#25D366]/15 hover:bg-[#25D366]/25 border border-[#25D366]/50 text-white font-display font-bold text-xs tracking-[0.2em] uppercase flex items-center justify-center gap-2.5 transition-all">
+                <span>DISCUSS YOUR PROJECT</span>
+                <svg class="w-4 h-4 text-[#25D366]" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Functional Validated Quotation Form -->
+          <div class="lg:col-span-7 surface-card p-6 sm:p-10 rounded-2xl border border-titanium/20">
+            <form id="quotation-form" novalidate class="space-y-5">
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                <div>
+                  <label for="q-name" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                    FULL NAME <span class="text-electric">*</span>
+                  </label>
+                  <input id="q-name" name="fullName" type="text" required placeholder="Your full name" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white placeholder-titanium/40 text-sm focus:border-electric focus:outline-none" />
+                </div>
+
+                <div>
+                  <label for="q-company" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                    COMPANY NAME (OPTIONAL)
+                  </label>
+                  <input id="q-company" name="companyName" type="text" placeholder="Company or organization" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white placeholder-titanium/40 text-sm focus:border-electric focus:outline-none" />
+                </div>
+
+                <div>
+                  <label for="q-phone" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                    TELEPHONE <span class="text-electric">*</span>
+                  </label>
+                  <input id="q-phone" name="telephone" type="tel" required placeholder="e.g. 079 000 0000" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white placeholder-titanium/40 text-sm focus:border-electric focus:outline-none" />
+                </div>
+
+                <div>
+                  <label for="q-email" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                    EMAIL ADDRESS <span class="text-electric">*</span>
+                  </label>
+                  <input id="q-email" name="email" type="email" required placeholder="you@domain.co.za" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white placeholder-titanium/40 text-sm focus:border-electric focus:outline-none" />
+                </div>
+
+                <div>
+                  <label for="q-service" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                    SERVICE REQUIRED <span class="text-electric">*</span>
+                  </label>
+                  <select id="q-service" name="serviceRequired" required class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white text-sm focus:border-electric focus:outline-none">
+                    <option value="Custom Metal Fabrication">Custom Metal Fabrication</option>
+                    <option value="Structural Steel Fabrication">Structural Steel Fabrication</option>
+                    <option value="Professional Welding Services">Professional Welding Services</option>
+                    <option value="Metal Cutting and Shaping">Metal Cutting and Shaping</option>
+                    <option value="Custom Steel Structures">Custom Steel Structures</option>
+                    <option value="Metal Gates and Security Solutions">Metal Gates and Security Solutions</option>
+                    <option value="Metal Frames and Components">Metal Frames and Components</option>
+                    <option value="Metal Repairs and Maintenance">Metal Repairs and Maintenance</option>
+                    <option value="Bespoke Fabrication Solutions">Bespoke Fabrication Solutions</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="q-location" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                    PROJECT LOCATION <span class="text-electric">*</span>
+                  </label>
+                  <input id="q-location" name="projectLocation" type="text" required placeholder="Suburb / Town / Site Location" class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white placeholder-titanium/40 text-sm focus:border-electric focus:outline-none" />
+                </div>
+              </div>
+
+              <div>
+                <label for="q-description" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                  PROJECT DESCRIPTION <span class="text-electric">*</span>
+                </label>
+                <textarea id="q-description" name="projectDescription" rows="4" required placeholder="Provide dimensions, material preferences, quantities, and project objectives..." class="w-full px-4 py-3.5 rounded-xl bg-obsidian border border-titanium/25 text-white placeholder-titanium/40 text-sm focus:border-electric focus:outline-none"></textarea>
+              </div>
+
+              <div>
+                <label for="q-attachments" class="block font-mono text-[11px] tracking-[0.2em] text-titanium uppercase mb-2">
+                  REFERENCE ATTACHMENTS (SKETCHES / PHOTOS / PDF)
+                </label>
+                <input id="q-attachments" name="attachments" type="file" multiple accept="image/*,.pdf,.dwg,.dxf" class="w-full text-xs text-titanium file:mr-4 file:py-2.5 file:px-4 file:rounded-lg file:border-0 file:font-mono file:text-xs file:uppercase file:tracking-wider file:bg-graphite file:text-white hover:file:bg-electric file:transition-colors cursor-pointer bg-obsidian border border-titanium/25 rounded-xl p-2" />
+              </div>
+
+              <!-- Validation & Submission Feedback Box -->
+              <div id="quote-feedback" class="hidden p-4 rounded-xl text-sm"></div>
+
+              <div class="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+                <button type="submit" class="magnetic-btn flex-1 py-4 px-8 rounded-xl bg-electric hover:bg-[#ff6d38] text-white font-display font-bold text-xs sm:text-sm tracking-[0.22em] uppercase shadow-[0_12px_32px_rgba(255,90,31,0.4)] transition-all flex items-center justify-center gap-3">
+                  <span>SUBMIT QUOTATION ENQUIRY</span>
+                  <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M5 12h14M13 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         12. THE CONTACT HEADQUARTERS — VOSLOORUS, GAUTENG
+         ===================================================================== -->
+    <section id="contact" class="relative py-24 sm:py-32 bg-obsidian/80 backdrop-blur-[2px] border-t border-white/[0.07]">
+      <div class="max-w-[1440px] mx-auto px-5 sm:px-8 lg:px-12">
+        <div class="max-w-4xl mb-14 reveal-up">
+          <div class="flex items-center gap-3 mb-3">
+            <span class="font-mono text-xs tracking-[0.28em] text-electric uppercase">09 // HEADQUARTERS</span>
+            <span class="h-[1px] w-16 bg-titanium/25"></span>
+          </div>
+          <h2 class="font-display font-bold text-3xl sm:text-5xl lg:text-6xl tracking-[0.04em] uppercase text-titanium-gradient">
+            RAPTOR CUSTOM FABWORX HQ.
+          </h2>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          <!-- Left: HQ Coordinates, Click-to-Call, Directions & Editable Business Hours -->
+          <div class="lg:col-span-5 surface-card p-7 sm:p-9 rounded-2xl border border-titanium/20 flex flex-col justify-between space-y-8">
+            <div class="space-y-6">
+              <div>
+                <div class="font-mono text-[10px] tracking-[0.25em] text-electric uppercase">FACILITY ADDRESS</div>
+                <h3 class="font-display font-bold text-xl text-white uppercase tracking-wider mt-1">
+                  RAPTOR CUSTOM FABWORX
+                </h3>
+                <address class="not-italic text-sm sm:text-base text-platinum/80 mt-2 leading-relaxed">
+                  8039 Lekoloane Street<br />
+                  Marimba Gardens Ext. 9<br />
+                  Vosloorus, 1475<br />
+                  Gauteng, South Africa
+                </address>
+              </div>
+
+              <div class="pt-4 border-t border-white/10">
+                <div class="font-mono text-[10px] tracking-[0.25em] text-electric uppercase">TELEPHONE &amp; WHATSAPP</div>
+                <a href="tel:+27792658508" class="inline-block font-display font-bold text-2xl sm:text-3xl text-white hover:text-electric transition-colors mt-1 tracking-wider">
+                  079 265 8508
+                </a>
+              </div>
+
+              <!-- Editable Business Hours -->
+              <div class="pt-4 border-t border-white/10">
+                <div class="flex items-center justify-between mb-2">
+                  <span class="font-mono text-[10px] tracking-[0.25em] text-electric uppercase">OPERATING HOURS (EDITABLE)</span>
+                  <button id="edit-hours-btn" type="button" class="font-mono text-[10px] tracking-wider text-titanium hover:text-white underline uppercase">
+                    EDIT HOURS
+                  </button>
+                </div>
+                <div id="business-hours-display" class="text-xs sm:text-sm text-platinum/80 space-y-1.5 font-mono">
+                  <div class="flex justify-between"><span>MON – FRI:</span><span class="text-white">07:30 – 17:00</span></div>
+                  <div class="flex justify-between"><span>SATURDAY:</span><span class="text-white">08:00 – 13:00 (By Appointment)</span></div>
+                  <div class="flex justify-between"><span>SUNDAY:</span><span class="text-titanium">Closed</span></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action Buttons: Click-to-Call, WhatsApp, Google Maps Directions -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 pt-4 border-t border-white/10">
+              <a href="tel:+27792658508" class="py-3 px-4 rounded-xl bg-electric hover:bg-[#ff6d38] text-white font-display font-bold text-xs tracking-[0.16em] uppercase text-center transition-all">
+                CALL NOW
+              </a>
+              <a href="https://wa.me/27792658508?text=Hello%20RAPTOR%20CUSTOM%20FABWORX%2C%20I%20would%20like%20to%20enquire%20about%20metal%20fabrication." target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl bg-graphite hover:bg-[#22272E] border border-titanium/30 text-white font-display font-semibold text-xs tracking-[0.16em] uppercase text-center transition-all">
+                WHATSAPP
+              </a>
+              <a href="https://www.google.com/maps/search/?api=1&query=8039+Lekoloane+Street+Marimba+Gardens+Ext+9+Vosloorus+1475+South+Africa" target="_blank" rel="noopener noreferrer" class="py-3 px-4 rounded-xl bg-graphite hover:bg-[#22272E] border border-titanium/30 text-white font-display font-semibold text-xs tracking-[0.16em] uppercase text-center transition-all">
+                DIRECTIONS
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Interactive Google Map Embed -->
+          <div class="lg:col-span-7 surface-card rounded-2xl overflow-hidden border border-titanium/20 min-h-[380px] relative">
+            <iframe
+              title="RAPTOR CUSTOM FABWORX — 8039 Lekoloane Street, Marimba Gardens Ext. 9, Vosloorus, 1475"
+              src="https://maps.google.com/maps?q=8039%20Lekoloane%20Street%2C%20Vosloorus%2C%201475%2C%20South%20Africa&t=&z=15&ie=UTF8&iwloc=&output=embed"
+              class="w-full h-full min-h-[380px] border-0 filter invert-[90%] hue-rotate-180 contrast-[95%]"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="absolute bottom-4 left-4 surface-glass px-4 py-2 rounded-lg border border-titanium/25 pointer-events-none">
+              <span class="font-mono text-[10px] tracking-[0.2em] text-white uppercase">
+                8039 LEKOLOANE STREET // VOSLOORUS, 1475
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =====================================================================
+         17. THE FINAL SIGNATURE — CINEMATIC CLOSING STATEMENT
+         ===================================================================== -->
+    <section class="relative py-28 sm:py-36 bg-obsidian/85 backdrop-blur-[2px] border-t border-white/[0.08] overflow-hidden text-center">
+      <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(255,90,31,0.12)_0%,transparent_65%)] pointer-events-none"></div>
+
+      <div class="relative z-10 max-w-5xl mx-auto px-5 sm:px-8 reveal-up">
+        <!-- Metallic Raptor Emblem -->
+        <div class="w-20 h-20 sm:w-24 sm:h-24 mx-auto mb-8 flex items-center justify-center rounded-2xl surface-card border border-titanium/30 shadow-[0_0_50px_rgba(255,90,31,0.22)]">
+          <svg viewBox="0 0 120 120" class="w-14 h-14">
+            <polygon points="60,8 106,34 106,86 60,112 14,86 14,34" fill="#0B0D10" stroke="#E4E7EA" stroke-width="3.5" />
+            <path d="M37 83 L37 35 L68 35 C79 35 85 41 85 50 C85 58 79 64 70 66 L87 83 L72 83 L57 67 L49 67 L49 83 Z M49 45 L49 57 L66 57 C70 57 73 54 73 51 C73 47.5 70 45 66 45 Z" fill="#FFFFFF" />
+            <rect x="32" y="90" width="56" height="4" fill="#FF5A1F" />
+          </svg>
+        </div>
+
+        <h2 class="font-display font-bold text-3xl sm:text-5xl md:text-6xl tracking-[0.05em] uppercase text-titanium-gradient leading-[1.08]">
+          PRECISION IS NOT AN OPTION. IT IS OUR STANDARD.
+        </h2>
+
+        <p class="mt-6 font-mono text-xs sm:text-sm tracking-[0.28em] text-electric uppercase">
+          RAPTOR CUSTOM FABWORX — ENGINEERED TO MAKE AN IMPRESSION.
+        </p>
+
+        <div class="mt-10">
+          <a href="#quotation" class="magnetic-btn inline-flex items-center gap-3 px-9 py-4 rounded-xl bg-electric hover:bg-[#ff6d38] text-white font-display font-bold text-xs sm:text-sm tracking-[0.22em] uppercase shadow-[0_15px_40px_rgba(255,90,31,0.4)] transition-all">
+            <span>START YOUR PROJECT</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =====================================================================
+       METALLIC FOOTER & BACK-TO-TOP
+       ===================================================================== -->
+  <footer class="bg-[#060709] border-t border-white/10 py-12 px-5 sm:px-8 lg:px-12">
+    <div class="max-w-[1440px] mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+      <div>
+        <div class="font-display font-bold text-lg tracking-[0.2em] text-white uppercase">
+          RAPTOR CUSTOM FABWORX
+        </div>
+        <p class="text-xs text-titanium mt-1.5">
+          8039 Lekoloane Street, Marimba Gardens Ext. 9, Vosloorus, 1475, Gauteng, South Africa // Tel: 079 265 8508
+        </p>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 font-mono text-[11px] tracking-[0.2em] text-titanium uppercase">
+        <a href="#about" class="hover:text-white transition-colors">ABOUT</a>
+        <a href="#capabilities" class="hover:text-white transition-colors">CAPABILITIES</a>
+        <a href="#projects" class="hover:text-white transition-colors">PROJECTS</a>
+        <a href="#configurator" class="hover:text-white transition-colors">CONFIGURATOR</a>
+        <a href="#contact" class="hover:text-white transition-colors">CONTACT</a>
+      </div>
+
+      <button id="back-to-top" type="button" aria-label="Back to Top" class="inline-flex items-center gap-2.5 px-4 py-2.5 rounded-xl surface-glass border border-titanium/25 hover:border-electric text-xs font-mono tracking-[0.2em] text-white uppercase transition-all">
+        <span>TOP</span>
+        <svg class="w-3.5 h-3.5 text-electric" fill="none" stroke="currentColor" stroke-width="2.4" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7" />
+        </svg>
+      </button>
+    </div>
+  </footer>
+
+  <!-- Floating Mobile-Accessible WhatsApp Quick Action -->
+  <a id="floating-whatsapp" href="https://wa.me/27792658508?text=Hello%20RAPTOR%20CUSTOM%20FABWORX%2C%20I%20would%20like%20to%20discuss%20a%20metal%20fabrication%20project." target="_blank" rel="noopener noreferrer" aria-label="Discuss Your Project on WhatsApp" class="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2.5 px-4 py-3 rounded-full bg-[#11151A]/95 border border-[#25D366]/60 text-white shadow-[0_10px_30px_rgba(0,0,0,0.85)] hover:scale-105 transition-transform">
+    <span class="w-2.5 h-2.5 rounded-full bg-[#25D366] animate-pulse"></span>
+    <span class="font-display font-semibold text-xs tracking-[0.16em] uppercase">WHATSAPP</span>
+  </a>
+
+  <!-- Project Lightbox Modal -->
+  <div id="project-modal" class="fixed inset-0 z-[90] hidden bg-obsidian/90 backdrop-blur-xl flex items-center justify-center p-4 sm:p-8" role="dialog" aria-modal="true">
+    <div class="surface-card max-w-3xl w-full rounded-2xl border border-titanium/30 overflow-hidden shadow-2xl">
+      <div class="flex items-center justify-between px-6 py-4 border-b border-white/10">
+        <span id="modal-category" class="font-mono text-xs tracking-[0.22em] text-electric uppercase">CATEGORY</span>
+        <button id="close-project-modal" type="button" class="px-3 py-1 rounded-lg bg-graphite text-white font-mono text-xs hover:bg-electric transition-colors">
+          CLOSE [ESC]
+        </button>
+      </div>
+      <div id="modal-visual" class="h-64 sm:h-80 bg-graphite relative"></div>
+      <div class="p-6 sm:p-8 space-y-4">
+        <div class="inline-block px-3 py-1 rounded bg-white/5 border border-titanium/25 font-mono text-[10px] tracking-[0.2em] text-titanium uppercase">
+          ILLUSTRATIVE CAPABILITY VISUALISATION
+        </div>
+        <h3 id="modal-title" class="font-display font-bold text-2xl sm:text-3xl text-white uppercase tracking-wide"></h3>
+        <p id="modal-desc" class="text-sm sm:text-base text-platinum/80 leading-relaxed font-light"></p>
+        <div class="pt-3 flex flex-wrap gap-3">
+          <a id="modal-quote-link" href="#quotation" class="px-6 py-3 rounded-xl bg-electric text-white font-display font-bold text-xs tracking-[0.2em] uppercase">
+            REQUEST SIMILAR FABRICATION
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =====================================================================
+       APPLICATION LOGIC: CINEMATIC INTRO, FOUNDRY CANVAS, THREE.JS, EDITABLE CATALOGUE, CONFIGURATOR & WHATSAPP
+       ===================================================================== -->
+  <script>
+    (function () {
+      'use strict';
+
+      /* -------------------------------------------------------------------
+         0. CINEMATIC VIDEO-STYLE PHOTO SLIDESHOW ENGINE (GLOBAL + SECTIONS)
+         ------------------------------------------------------------------- */
+      function initCinemaReel(containerId, intervalMs = 5500) {
+        const container = document.getElementById(containerId);
+        if (!container) return null;
+        const slides = Array.from(container.querySelectorAll('.cinema-slide'));
+        if (slides.length <= 1) return null;
+        let currentIndex = 0;
+
+        const goToSlide = (nextIdx) => {
+          slides[currentIndex].classList.remove('is-active');
+          currentIndex = (nextIdx + slides.length) % slides.length;
+          slides[currentIndex].classList.add('is-active');
+        };
+
+        const timer = setInterval(() => {
+          goToSlide(currentIndex + 1);
+        }, intervalMs);
+
+        return { goToSlide, timer };
+      }
+
+      const globalReel = initCinemaReel('global-ambient-reel', 6500);
+      const heroReel = initCinemaReel('hero-photo-reel', 5000);
+      initCinemaReel('editorial-photo-reel', 4800);
+
+      /* -------------------------------------------------------------------
+         1. CINEMATIC INTRODUCTION CURTAIN
+         ------------------------------------------------------------------- */
+      const introCurtain = document.getElementById('intro-curtain');
+      const introLogoWrap = document.getElementById('intro-logo-wrap');
+      const introProgress = document.getElementById('intro-progress');
+      const skipIntroBtn = document.getElementById('skip-intro-btn');
+
+      function dismissIntro() {
+        if (!introCurtain || introCurtain.dataset.dismissed === 'true') return;
+        introCurtain.dataset.dismissed = 'true';
+        introCurtain.style.transition = 'opacity 0.85s cubic-bezier(0.22, 1, 0.36, 1), transform 0.85s cubic-bezier(0.22, 1, 0.36, 1)';
+        introCurtain.style.opacity = '0';
+        introCurtain.style.transform = 'scale(1.03)';
+        setTimeout(() => {
+          introCurtain.style.display = 'none';
+        }, 880);
+      }
+
+      if (introCurtain && introLogoWrap && introProgress) {
+        requestAnimationFrame(() => {
+          introLogoWrap.classList.remove('opacity-0', 'scale-95');
+          introLogoWrap.classList.add('opacity-100', 'scale-100');
+          introProgress.style.width = '100%';
+        });
+        const introTimer = setTimeout(dismissIntro, 2400);
+        if (skipIntroBtn) {
+          skipIntroBtn.addEventListener('click', () => {
+            clearTimeout(introTimer);
+            dismissIntro();
+          });
+        }
+      }
+
+      /* -------------------------------------------------------------------
+         2. IMMERSIVE NAVIGATION & MOBILE MENU
+         ------------------------------------------------------------------- */
+      const navContainer = document.getElementById('nav-container');
+      const mobileToggle = document.getElementById('mobile-menu-toggle');
+      const mobileDrawer = document.getElementById('mobile-menu-drawer');
+
+      window.addEventListener('scroll', () => {
+        if (!navContainer) return;
+        if (window.scrollY > 40) {
+          navContainer.classList.add('surface-glass', 'shadow-2xl');
+          navContainer.classList.remove('border-transparent');
+        } else {
+          navContainer.classList.remove('surface-glass', 'shadow-2xl');
+          navContainer.classList.add('border-transparent');
+        }
+      }, { passive: true });
+
+      if (mobileToggle && mobileDrawer) {
+        mobileToggle.addEventListener('click', () => {
+          const isOpen = !mobileDrawer.classList.contains('hidden');
+          mobileDrawer.classList.toggle('hidden');
+          mobileToggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+          link.addEventListener('click', () => {
+            mobileDrawer.classList.add('hidden');
+            mobileToggle.setAttribute('aria-expanded', 'false');
+          });
+        });
+      }
+
+      /* -------------------------------------------------------------------
+         3. HERO PROCEDURAL INDUSTRIAL FOUNDRY & ARCHITECTURAL STEEL CANVAS
+         ------------------------------------------------------------------- */
+      const heroCanvas = document.getElementById('hero-foundry-canvas');
+      if (heroCanvas) {
+        const ctx = heroCanvas.getContext('2d');
+        let width = 0;
+        let height = 0;
+        let sparks = [];
+        let heroMode = 'sparks';
+        let laserX = 0;
+
+        function resizeHeroCanvas() {
+          width = heroCanvas.width = heroCanvas.offsetWidth || window.innerWidth;
+          height = heroCanvas.height = heroCanvas.offsetHeight || window.innerHeight;
+        }
+        resizeHeroCanvas();
+        window.addEventListener('resize', resizeHeroCanvas);
+
+        class Spark {
+          constructor(resetFromForge = true) {
+            this.reset(resetFromForge);
+          }
+          reset(fromForge = true) {
+            const originX = fromForge ? width * 0.68 : Math.random() * width;
+            const originY = fromForge ? height * 0.46 : Math.random() * height;
+            this.x = originX + (Math.random() - 0.5) * 90;
+            this.y = originY + (Math.random() - 0.5) * 60;
+            const angle = Math.random() * Math.PI * 2;
+            const speed = heroMode === 'sparks' ? (1.5 + Math.random() * 5.2) : (0.6 + Math.random() * 2.2);
+            this.vx = Math.cos(angle) * speed - 0.8;
+            this.vy = Math.sin(angle) * speed - 1.2;
+            this.life = 1;
+            this.decay = 0.008 + Math.random() * 0.016;
+            this.size = 1 + Math.random() * 2.2;
+            this.hot = Math.random() > 0.35;
+          }
+          update() {
+            this.x += this.vx;
+            this.y += this.vy;
+            this.vy += 0.055; // realistic gravity arc
+            this.vx *= 0.992;
+            this.life -= this.decay;
+            if (this.life <= 0 || this.y > height + 20) {
+              this.reset(true);
+            }
+          }
+          draw() {
+            ctx.save();
+            ctx.globalAlpha = Math.max(0, this.life);
+            ctx.strokeStyle = this.hot ? '#FF5A1F' : '#FFE3C8';
+            ctx.lineWidth = this.size;
+            ctx.beginPath();
+            ctx.moveTo(this.x, this.y);
+            ctx.lineTo(this.x - this.vx * 3.2, this.y - this.vy * 3.2);
+            ctx.stroke();
+            ctx.restore();
+          }
+        }
+
+        const particleCount = window.innerWidth < 768 ? 55 : 120;
+        for (let i = 0; i < particleCount; i++) {
+          sparks.push(new Spark(false));
+        }
+        document.querySelectorAll('.hero-mode-btn').forEach((btn, idx) => {
+          btn.addEventListener('click', () => {
+            heroMode = btn.dataset.heroMode || 'sparks';
+            if (heroReel) heroReel.goToSlide(idx);
+            if (globalReel) globalReel.goToSlide(idx);
+            document.querySelectorAll('.hero-mode-btn').forEach((b) => {
+              b.classList.remove('border-electric/60', 'bg-white/[0.04]');
+              b.classList.add('border-white/10', 'bg-white/[0.02]');
+            });
+            btn.classList.remove('border-white/10', 'bg-white/[0.02]');
+            btn.classList.add('border-electric/60', 'bg-white/[0.04]');
+          });
+        });
+
+        function renderHeroLoop() {
+          ctx.clearRect(0, 0, width, height);
+
+          // Architectural Steel Girder Silhouettes in Background
+          ctx.save();
+          ctx.strokeStyle = 'rgba(174, 181, 189, 0.08)';
+          ctx.lineWidth = 1.2;
+          const step = 140;
+          for (let x = -height; x < width + height; x += step) {
+            ctx.beginPath();
+            ctx.moveTo(x, height);
+            ctx.lineTo(x + height * 0.65, 0);
+            ctx.stroke();
+          }
+          ctx.restore();
+
+          // Molten Forge Ambient Glow
+          const glowX = width * 0.68;
+          const glowY = height * 0.46;
+          const grad = ctx.createRadialGradient(glowX, glowY, 10, glowX, glowY, Math.max(width, height) * 0.45);
+          grad.addColorStop(0, heroMode === 'laser' ? 'rgba(255, 255, 255, 0.14)' : 'rgba(255, 90, 31, 0.22)');
+          grad.addColorStop(0.45, 'rgba(255, 90, 31, 0.06)');
+          grad.addColorStop(1, 'rgba(8, 10, 12, 0)');
+          ctx.fillStyle = grad;
+          ctx.fillRect(0, 0, width, height);
+
+          // Laser Cutting Beam Mode
+          if (heroMode === 'laser') {
+            laserX = (laserX + 4.5) % (width || 1200);
+            ctx.save();
+            const beamGrad = ctx.createLinearGradient(laserX, 0, laserX, height);
+            beamGrad.addColorStop(0, 'rgba(255, 90, 31, 0)');
+            beamGrad.addColorStop(0.5, 'rgba(255, 90, 31, 0.75)');
+            beamGrad.addColorStop(1, 'rgba(255, 255, 255, 0)');
+            ctx.strokeStyle = beamGrad;
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(laserX, 0);
+            ctx.lineTo(laserX, height);
+            ctx.stroke();
+            ctx.restore();
+          }
+
+          // Structural Blueprint Frame Mode
+          if (heroMode === 'structure') {
+            ctx.save();
+            ctx.strokeStyle = 'rgba(228, 231, 234, 0.14)';
+            ctx.lineWidth = 1.5;
+            ctx.strokeRect(width * 0.54, height * 0.22, width * 0.34, height * 0.52);
+            ctx.beginPath();
+            ctx.moveTo(width * 0.54, height * 0.22);
+            ctx.lineTo(width * 0.88, height * 0.74);
+            ctx.moveTo(width * 0.88, height * 0.22);
+            ctx.lineTo(width * 0.54, height * 0.74);
+            ctx.stroke();
+            ctx.restore();
+          }
+
+          for (let i = 0; i < sparks.length; i++) {
+            sparks[i].update();
+            sparks[i].draw();
+          }
+
+          requestAnimationFrame(renderHeroLoop);
+        }
+        renderHeroLoop();
+      }
+
+      /* -------------------------------------------------------------------
+         4. EDITABLE 9-SERVICE CAPABILITIES SHOWCASE
+         ------------------------------------------------------------------- */
+      const DEFAULT_SERVICES = [
+        {
+          id: '01',
+          title: 'CUSTOM METAL FABRICATION',
+          tag: 'BESPOKE ENGINEERING',
+          imageUrl: 'https://images.pexels.com/photos/38520034/pexels-photo-38520034.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          imageCredit: 'Photo by Vadym Alyekseyenko from Pexels',
+          description: 'End-to-end custom metalwork built to client drawings, site measurements, and functional specifications.'
+        },
+        {
+          id: '02',
+          title: 'STRUCTURAL STEEL FABRICATION',
+          tag: 'HEAVY LOAD-BEARING',
+          imageUrl: 'https://images.pexels.com/photos/28216642/pexels-photo-28216642.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          imageCredit: 'Photo by ERFIN EKARANA from Pexels',
+          description: 'Precision-cut beams, columns, base plates, and structural steel assemblies engineered for strength and stability.'
+        },
+        {
+          id: '03',
+          title: 'PROFESSIONAL WELDING SERVICES',
+          tag: 'HIGH-INTEGRITY JOINTS',
+          imageUrl: 'https://images.pexels.com/photos/3970340/pexels-photo-3970340.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          imageCredit: 'Photo by Nishant Aneja from Pexels',
+          description: 'Clean, structurally sound welding across mild steel, stainless steel, and heavy workshop assemblies.'
+        },
+        {
+          id: '04',
+          title: 'METAL CUTTING AND SHAPING',
+          tag: 'ACCURATE PROFILING',
+          imageUrl: 'https://images.pexels.com/photos/5846146/pexels-photo-5846146.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          imageCredit: 'Photo by Tima Miroshnichenko from Pexels',
+          description: 'Dimensional cutting, plate profiling, bending, and forming to exact geometric tolerances.'
+        },
+        {
+          id: '05',
+          title: 'CUSTOM STEEL STRUCTURES',
+          tag: 'ARCHITECTURAL & INDUSTRIAL',
+          imageUrl: 'https://images.pexels.com/photos/10682523/pexels-photo-10682523.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          imageCredit: 'Photo by Blue Arauz from Pexels',
+          description: 'Purpose-built canopies, mezzanines, support frames, and steel enclosures tailored to site conditions.'
+        },
+        {
+          id: '06',
+          title: 'METAL GATES AND SECURITY SOLUTIONS',
+          tag: 'PERIMETER PROTECTION',
+          imageUrl: 'https://images.pexels.com/photos/830899/pexels-photo-830899.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          imageCredit: 'Photo by Tomé Louro from Pexels',
+          description: 'Reinforced sliding gates, swing gates, palisade fencing, burglar bars, and heavy-duty security barriers.'
+        },
+        {
+          id: '07',
+          title: 'METAL FRAMES AND COMPONENTS',
+          tag: 'MODULAR ASSEMBLIES',
+          imageUrl: 'https://images.pexels.com/photos/21050460/pexels-photo-21050460.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          imageCredit: 'Photo by Gawtham Vijayan from Pexels',
+          description: 'Precision steel sub-frames, brackets, mounting skids, and custom mechanical components.'
+        },
+        {
+          id: '08',
+          title: 'METAL REPAIRS AND MAINTENANCE',
+          tag: 'STRUCTURAL RESTORATION',
+          imageUrl: 'https://images.pexels.com/photos/7019370/pexels-photo-7019370.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          imageCredit: 'Photo by cottonbro studio from Pexels',
+          description: 'On-site and workshop reinforcement, weld repairs, component refurbishment, and structural modifications.'
+        },
+        {
+          id: '09',
+          title: 'BESPOKE FABRICATION SOLUTIONS',
+          tag: 'SPECIALIST COMMISSIONS',
+          imageUrl: 'https://images.pexels.com/photos/10395741/pexels-photo-10395741.jpeg?auto=compress&cs=tinysrgb&w=1200',
+          imageCredit: 'Photo by Elif from Pexels',
+          description: 'One-off custom steel creations and tailored problem-solving for residential, commercial, and industrial clients.'
+        }
+      ];
+
+      let servicesData = DEFAULT_SERVICES.map((item) => ({ ...item }));
+      try {
+        const saved = localStorage.getItem('raptor_fabworx_services_v1');
+        if (saved) {
+          const parsed = JSON.parse(saved);
+          if (Array.isArray(parsed) && parsed.length === 9) {
+            servicesData = parsed.map((item, idx) => ({
+              ...DEFAULT_SERVICES[idx],
+              ...item,
+              imageUrl: DEFAULT_SERVICES[idx].imageUrl || item.imageUrl,
+              imageCredit: DEFAULT_SERVICES[idx].imageCredit || item.imageCredit
+            }));
+          }
+        }
+      } catch (e) { /* Ignore storage restrictions */ }
+
+      let isEditMode = false;
+      const capabilitiesGrid = document.getElementById('capabilities-grid');
+      const toggleEditBtn = document.getElementById('toggle-edit-services');
+      const editServicesLabel = document.getElementById('edit-services-label');
+      const editServicesBanner = document.getElementById('edit-services-banner');
+      const resetServicesBtn = document.getElementById('reset-services-btn');
+
+      function saveServices() {
+        try {
+          localStorage.setItem('raptor_fabworx_services_v1', JSON.stringify(servicesData));
+        } catch (e) { /* Ignore */ }
+      }
+
+      function renderServices() {
+        if (!capabilitiesGrid) return;
+        capabilitiesGrid.innerHTML = servicesData.map((srv, idx) => {
+          const svgFallback = `
+            <svg viewBox="0 0 600 240" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" preserveAspectRatio="xMidYMid slice">
+              <defs>
+                <linearGradient id="srvGrad${idx}" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="#1D2229" />
+                  <stop offset="100%" stop-color="#0B0D10" />
+                </linearGradient>
+              </defs>
+              <rect width="600" height="240" fill="url(#srvGrad${idx})" />
+              <g stroke="rgba(174,181,189,0.12)" stroke-width="1">
+                <line x1="0" y1="60" x2="600" y2="60" />
+                <line x1="0" y1="120" x2="600" y2="120" />
+                <line x1="0" y1="180" x2="600" y2="180" />
+                <line x1="150" y1="0" x2="150" y2="240" />
+                <line x1="300" y1="0" x2="300" y2="240" />
+                <line x1="450" y1="0" x2="450" y2="240" />
+              </g>
+              <polygon points="${80 + (idx * 18)},210 ${260 + (idx * 12)},40 ${330 + (idx * 12)},40 ${150 + (idx * 18)},210" fill="rgba(228,231,234,0.14)" />
+              <line x1="40" y1="${175 - idx * 8}" x2="560" y2="${65 + idx * 8}" stroke="#FF5A1F" stroke-width="2" stroke-opacity="0.65" />
+            </svg>
+          `;
+
+          const visualMedia = srv.imageUrl
+            ? `
+              <img
+                src="${srv.imageUrl}"
+                alt="${srv.title} — ${srv.imageCredit || 'RAPTOR CUSTOM FABWORX'}"
+                title="${srv.imageCredit || ''}"
+                loading="lazy"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='block';"
+                class="w-full h-full object-cover object-center brightness-90 contrast-110 transition-transform duration-700 group-hover:scale-110"
+              />
+              <div style="display:none;" class="w-full h-full">${svgFallback}</div>
+            `
+            : svgFallback;
+
+          return `
+          <article class="metallic-card surface-card rounded-2xl border border-titanium/15 hover:border-electric/60 transition-all duration-500 flex flex-col justify-between group overflow-hidden">
+            <div>
+              <!-- Architectural Metallic Visual Header -->
+              <div class="relative h-48 bg-[#101318] overflow-hidden border-b border-white/[0.07]">
+                ${visualMedia}
+
+                <div class="absolute inset-0 bg-gradient-to-t from-[#111418] via-[#111418]/35 to-obsidian/45 pointer-events-none"></div>
+
+                <div class="absolute top-4 left-4 right-4 flex items-center justify-between">
+                  <span class="px-2.5 py-1 rounded bg-obsidian/85 backdrop-blur-md border border-white/10 font-mono text-[10px] tracking-[0.2em] text-titanium uppercase">
+                    ${srv.tag}
+                  </span>
+                  <span class="font-display font-bold text-2xl text-white/40 group-hover:text-electric group-hover:scale-110 transition-all drop-shadow">
+                    ${srv.id}
+                  </span>
+                </div>
+
+                ${srv.imageCredit ? `
+                <div class="absolute bottom-2.5 right-3 font-mono text-[9px] tracking-wider text-titanium/70 bg-obsidian/75 px-2 py-0.5 rounded backdrop-blur-sm">
+                  ${srv.imageCredit}
+                </div>
+                ` : ''}
+              </div>
+
+              <!-- Card Content -->
+              <div class="p-6 sm:p-7">
+                <h3
+                  data-service-index="${idx}"
+                  data-field="title"
+                  contenteditable="${isEditMode}"
+                  class="font-display font-bold text-lg sm:text-xl text-white uppercase tracking-wider leading-snug ${isEditMode ? 'outline-dashed outline-1 outline-electric p-1 rounded bg-obsidian/60' : ''}"
+                >${srv.title}</h3>
+
+                <p
+                  data-service-index="${idx}"
+                  data-field="description"
+                  contenteditable="${isEditMode}"
+                  class="mt-3 text-sm text-platinum/75 leading-relaxed font-light ${isEditMode ? 'outline-dashed outline-1 outline-titanium/50 p-1.5 rounded bg-obsidian/60' : ''}"
+                >${srv.description}</p>
+              </div>
+            </div>
+
+            <!-- Interactive Footer Link -->
+            <div class="px-6 sm:px-7 pb-6 pt-2 flex items-center justify-between border-t border-white/[0.06]">
+              <button type="button" data-select-service="${srv.title}" class="select-capability-btn inline-flex items-center gap-2.5 font-mono text-[11px] tracking-[0.2em] text-titanium group-hover:text-white uppercase transition-colors">
+                <span>REQUEST SCOPE</span>
+                <svg class="w-4 h-4 text-electric transform group-hover:translate-x-1.5 transition-transform" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                </svg>
+              </button>
+              <span class="font-mono text-[10px] text-titanium/40">RCF-${srv.id}</span>
+            </div>
+          </article>
+        `;
+        }).join('');
+
+        // Bind inline editing listeners when edit mode is active
+        if (isEditMode) {
+          capabilitiesGrid.querySelectorAll('[contenteditable="true"]').forEach((el) => {
+            el.addEventListener('blur', () => {
+              const idx = Number(el.dataset.serviceIndex);
+              const field = el.dataset.field;
+              if (servicesData[idx] && field) {
+                servicesData[idx][field] = el.textContent.trim();
+                saveServices();
+              }
+            });
+          });
+        }
+
+        // Bind quick-select to project configurator
+        capabilitiesGrid.querySelectorAll('.select-capability-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const serviceTitle = btn.dataset.selectService;
+            const cfgType = document.getElementById('cfg-type');
+            const qService = document.getElementById('q-service');
+            if (cfgType && serviceTitle) {
+              Array.from(cfgType.options).forEach((opt) => {
+                if (opt.value.toUpperCase() === serviceTitle.toUpperCase()) {
+                  cfgType.value = opt.value;
+                }
+              });
+              cfgType.dispatchEvent(new Event('change'));
+            }
+            if (qService && serviceTitle) {
+              Array.from(qService.options).forEach((opt) => {
+                if (opt.value.toUpperCase() === serviceTitle.toUpperCase()) {
+                  qService.value = opt.value;
+                }
+              });
+            }
+            document.getElementById('configurator')?.scrollIntoView({ behavior: 'smooth' });
+          });
+        });
+      }
+      renderServices();
+
+      if (toggleEditBtn) {
+        toggleEditBtn.addEventListener('click', () => {
+          isEditMode = !isEditMode;
+          if (editServicesLabel) {
+            editServicesLabel.textContent = isEditMode ? 'SAVE & EXIT EDITOR' : 'CUSTOMIZE SERVICES';
+          }
+          if (editServicesBanner) {
+            editServicesBanner.classList.toggle('hidden', !isEditMode);
+          }
+          renderServices();
+        });
+      }
+
+      if (resetServicesBtn) {
+        resetServicesBtn.addEventListener('click', () => {
+          servicesData = [...DEFAULT_SERVICES];
+          saveServices();
+          renderServices();
+        });
+      }
+
+      /* -------------------------------------------------------------------
+         5. PROJECT PORTFOLIO GALLERY & LIGHTBOX
+         ------------------------------------------------------------------- */
+      const PORTFOLIO_ITEMS = [
+        {
+          title: 'Heavy Structural Portal Frame Assembly',
+          category: 'Structural Fabrication',
+          status: 'ILLUSTRATIVE CAPABILITY CONCEPT',
+          images: [
+            'https://images.pexels.com/photos/10682523/pexels-photo-10682523.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            'https://images.pexels.com/photos/38520034/pexels-photo-38520034.jpeg?auto=compress&cs=tinysrgb&w=1200'
+          ],
+          summary: 'Precision-welded structural steel columns, gusset plates, and roof rafters engineered for commercial warehouse spans.'
+        },
+        {
+          title: 'Architectural Sliding Security Gate System',
+          category: 'Custom Metalwork',
+          status: 'ILLUSTRATIVE CAPABILITY CONCEPT',
+          images: [
+            'https://images.pexels.com/photos/830899/pexels-photo-830899.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            'https://images.pexels.com/photos/21050460/pexels-photo-21050460.jpeg?auto=compress&cs=tinysrgb&w=1200'
+          ],
+          summary: 'Heavy-gauge steel perimeter gate combining clean vertical architectural bars with reinforced track hardware.'
+        },
+        {
+          title: 'High-Integrity Multi-Pass Structural Welding',
+          category: 'Welding',
+          status: 'ILLUSTRATIVE CAPABILITY CONCEPT',
+          images: [
+            'https://images.pexels.com/photos/3970340/pexels-photo-3970340.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            'https://images.pexels.com/photos/28216642/pexels-photo-28216642.jpeg?auto=compress&cs=tinysrgb&w=1200'
+          ],
+          summary: 'Precision MIG/ARC welding on thick-section structural plates requiring clean penetration and distortion control.'
+        },
+        {
+          title: 'Custom Industrial Machinery Skid & Frame',
+          category: 'Industrial Components',
+          status: 'ILLUSTRATIVE CAPABILITY CONCEPT',
+          images: [
+            'https://images.pexels.com/photos/7019370/pexels-photo-7019370.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            'https://images.pexels.com/photos/21050460/pexels-photo-21050460.jpeg?auto=compress&cs=tinysrgb&w=1200'
+          ],
+          summary: 'Fabricated steel base frame with precision-drilled mounting pads built to support heavy operational equipment.'
+        },
+        {
+          title: 'Precision Metal Grinding & Surface Finishing',
+          category: 'Steel Fabrication',
+          status: 'ILLUSTRATIVE CAPABILITY CONCEPT',
+          images: [
+            'https://images.pexels.com/photos/5846146/pexels-photo-5846146.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            'https://images.pexels.com/photos/10395741/pexels-photo-10395741.jpeg?auto=compress&cs=tinysrgb&w=1200'
+          ],
+          summary: 'Accurate metal cutting, edge beveling, and weld seam dressing for clean architectural and industrial assemblies.'
+        },
+        {
+          title: 'Custom Canopy & Carport Steel Truss',
+          category: 'Structural Fabrication',
+          status: 'ILLUSTRATIVE CAPABILITY CONCEPT',
+          images: [
+            'https://images.pexels.com/photos/38520034/pexels-photo-38520034.jpeg?auto=compress&cs=tinysrgb&w=1200',
+            'https://images.pexels.com/photos/10682523/pexels-photo-10682523.jpeg?auto=compress&cs=tinysrgb&w=1200'
+          ],
+          summary: 'Weather-resistant structural steel overhang fabricated for residential and commercial parking protection.'
+        }
+      ];
+
+      const projectsGrid = document.getElementById('projects-grid');
+      const projectModal = document.getElementById('project-modal');
+      const closeProjectModal = document.getElementById('close-project-modal');
+      let portfolioSlideTimers = [];
+
+      function renderPortfolio(filter = 'ALL') {
+        if (!projectsGrid) return;
+        portfolioSlideTimers.forEach((t) => clearInterval(t));
+        portfolioSlideTimers = [];
+
+        const filtered = filter === 'ALL'
+          ? PORTFOLIO_ITEMS
+          : PORTFOLIO_ITEMS.filter((item) => item.category === filter);
+
+        projectsGrid.innerHTML = filtered.map((item, index) => `
+          <article class="metallic-card surface-card rounded-2xl overflow-hidden border border-titanium/15 hover:border-electric/60 transition-all duration-500 flex flex-col justify-between group">
+            <div>
+              <div id="proj-reel-${index}" class="relative h-60 bg-[#0E1116] overflow-hidden">
+                <img src="${item.images[0]}" alt="${item.title}" loading="lazy" class="cinema-slide is-active brightness-90 contrast-115" />
+                <img src="${item.images[1]}" alt="${item.title} alternate view" loading="lazy" class="cinema-slide brightness-90 contrast-115" />
+                <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-obsidian/20 to-transparent pointer-events-none"></div>
+                <div class="absolute top-3.5 left-3.5 right-3.5 flex items-center justify-between gap-2 z-10">
+                  <span class="px-2.5 py-1 rounded bg-obsidian/90 border border-white/10 font-mono text-[10px] tracking-[0.18em] text-electric uppercase">
+                    ${item.category}
+                  </span>
+                  <span class="px-2.5 py-1 rounded bg-obsidian/85 border border-titanium/25 font-mono text-[9px] tracking-[0.16em] text-titanium uppercase">
+                    ILLUSTRATIVE
+                  </span>
+                </div>
+              </div>
+
+              <div class="p-6">
+                <h3 class="font-display font-bold text-xl text-white uppercase tracking-wide group-hover:text-electric transition-colors">
+                  ${item.title}
+                </h3>
+                <p class="mt-2.5 text-sm text-platinum/75 font-light leading-relaxed">
+                  ${item.summary}
+                </p>
+              </div>
+            </div>
+
+            <div class="px-6 pb-6 pt-2 flex items-center justify-between border-t border-white/[0.06]">
+              <button type="button" data-project-idx="${index}" class="open-project-btn font-mono text-[11px] tracking-[0.2em] text-white hover:text-electric uppercase inline-flex items-center gap-2 transition-colors">
+                <span>INSPECT SPECIFICATION</span>
+                <span>→</span>
+              </button>
+            </div>
+          </article>
+        `).join('');
+
+        filtered.forEach((_, index) => {
+          const reel = initCinemaReel(`proj-reel-${index}`, 4200 + index * 450);
+          if (reel && reel.timer) portfolioSlideTimers.push(reel.timer);
+        });
+
+        projectsGrid.querySelectorAll('.open-project-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const item = filtered[Number(btn.dataset.projectIdx)];
+            if (!item || !projectModal) return;
+            document.getElementById('modal-category').textContent = item.category;
+            document.getElementById('modal-title').textContent = item.title;
+            document.getElementById('modal-desc').textContent = item.summary;
+            document.getElementById('modal-visual').innerHTML = `
+              <img src="${item.images[0]}" alt="${item.title}" class="w-full h-full object-cover brightness-90 contrast-115" />
+              <div class="absolute inset-0 bg-gradient-to-t from-obsidian via-transparent to-obsidian/30"></div>
+              <div class="absolute bottom-4 left-6 font-mono text-xs tracking-[0.22em] text-white uppercase">
+                ${item.category.toUpperCase()} // TECHNICAL OVERVIEW
+              </div>
+            `;
+            projectModal.classList.remove('hidden');
+          });
+        });
+      }
+
+      renderPortfolio('ALL');
+
+      document.querySelectorAll('.project-filter-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          document.querySelectorAll('.project-filter-btn').forEach((b) => {
+            b.classList.remove('bg-electric', 'text-white');
+            b.classList.add('surface-glass', 'text-platinum');
+          });
+          btn.classList.remove('surface-glass', 'text-platinum');
+          btn.classList.add('bg-electric', 'text-white');
+          renderPortfolio(btn.dataset.filter || 'ALL');
+        });
+      });
+
+      if (closeProjectModal && projectModal) {
+        closeProjectModal.addEventListener('click', () => projectModal.classList.add('hidden'));
+        projectModal.addEventListener('click', (e) => {
+          if (e.target === projectModal) projectModal.classList.add('hidden');
+        });
+        document.getElementById('modal-quote-link')?.addEventListener('click', () => {
+          projectModal.classList.add('hidden');
+        });
+      }
+
+      /* -------------------------------------------------------------------
+         6. BEFORE-AND-AFTER INTERACTIVE COMPARISON SLIDER
+         ------------------------------------------------------------------- */
+      const baContainer = document.getElementById('ba-container');
+      const baBeforeLayer = document.getElementById('ba-before-layer');
+      const baHandle = document.getElementById('ba-handle');
+
+      if (baContainer && baBeforeLayer && baHandle) {
+        let isDragging = false;
+        const updateSlider = (clientX) => {
+          const rect = baContainer.getBoundingClientRect();
+          const pos = Math.max(5, Math.min(95, ((clientX - rect.left) / rect.width) * 100));
+          baBeforeLayer.style.width = `${pos}%`;
+          baHandle.style.left = `${pos}%`;
+        };
+
+        baContainer.addEventListener('mousedown', (e) => {
+          isDragging = true;
+          updateSlider(e.clientX);
+        });
+        window.addEventListener('mouseup', () => { isDragging = false; });
+        window.addEventListener('mousemove', (e) => {
+          if (isDragging) updateSlider(e.clientX);
+        });
+
+        baContainer.addEventListener('touchstart', (e) => {
+          if (e.touches[0]) updateSlider(e.touches[0].clientX);
+        }, { passive: true });
+        baContainer.addEventListener('touchmove', (e) => {
+          if (e.touches[0]) updateSlider(e.touches[0].clientX);
+        }, { passive: true });
+      }
+
+      /* -------------------------------------------------------------------
+         7. INTERACTIVE THREE.JS 3D ENGINEERING SHOWCASE
+         ------------------------------------------------------------------- */
+      const threeCanvas = document.getElementById('three-engineering-canvas');
+      if (threeCanvas && typeof THREE !== 'undefined') {
+        const scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x090b0e);
+
+        const camera = new THREE.PerspectiveCamera(42, threeCanvas.clientWidth / threeCanvas.clientHeight, 0.1, 100);
+        camera.position.set(4.5, 3.2, 6.2);
+        camera.lookAt(0, 0, 0);
+
+        const renderer = new THREE.WebGLRenderer({ canvas: threeCanvas, antialias: true, powerPreference: 'high-performance' });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+        renderer.setSize(threeCanvas.clientWidth, threeCanvas.clientHeight, false);
+
+        // Lighting
+        const ambientLight = new THREE.AmbientLight(0xffffff, 0.55);
+        scene.add(ambientLight);
+
+        const keyLight = new THREE.DirectionalLight(0xffffff, 1.3);
+        keyLight.position.set(6, 9, 7);
+        scene.add(keyLight);
+
+        const rimLight = new THREE.PointLight(0xff5a1f, 2.2, 18);
+        rimLight.position.set(-4, 2, -4);
+        scene.add(rimLight);
+
+        // Grid Floor
+        const gridHelper = new THREE.GridHelper(12, 24, 0xff5a1f, 0x22272f);
+        gridHelper.position.y = -1.8;
+        scene.add(gridHelper);
+
+        // Metallic Materials
+        const steelMat = new THREE.MeshStandardMaterial({
+          color: 0xd0d5dd,
+          metalness: 0.85,
+          roughness: 0.25
+        });
+        const darkSteelMat = new THREE.MeshStandardMaterial({
+          color: 0x2c323b,
+          metalness: 0.75,
+          roughness: 0.35
+        });
+        const accentMat = new THREE.MeshStandardMaterial({
+          color: 0xff5a1f,
+          metalness: 0.5,
+          roughness: 0.3
+        });
+
+        const assemblyGroup = new THREE.Group();
+        scene.add(assemblyGroup);
+
+        function buildAssembly(type) {
+          while (assemblyGroup.children.length > 0) {
+            assemblyGroup.remove(assemblyGroup.children[0]);
+          }
+
+          if (type === 'ibeam') {
+            // Structural I-Beam Node with Gusset Plate & Bolts
+            const topFlange = new THREE.Mesh(new THREE.BoxGeometry(4.4, 0.22, 1.5), steelMat);
+            topFlange.position.y = 1.1;
+            const bottomFlange = new THREE.Mesh(new THREE.BoxGeometry(4.4, 0.22, 1.5), steelMat);
+            bottomFlange.position.y = -1.1;
+            const web = new THREE.Mesh(new THREE.BoxGeometry(4.4, 2.0, 0.22), darkSteelMat);
+
+            const gusset = new THREE.Mesh(new THREE.BoxGeometry(1.5, 1.8, 0.34), accentMat);
+            assemblyGroup.add(topFlange, bottomFlange, web, gusset);
+
+            // Precision Bolts
+            const boltGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.46, 12);
+            boltGeo.rotateX(Math.PI / 2);
+            [[-0.45, 0.55], [0.45, 0.55], [-0.45, -0.55], [0.45, -0.55]].forEach(([bx, by]) => {
+              const bolt = new THREE.Mesh(boltGeo, steelMat);
+              bolt.position.set(bx, by, 0);
+              assemblyGroup.add(bolt);
+            });
+          } else if (type === 'truss') {
+            // Architectural Space Truss
+            const topChord = new THREE.Mesh(new THREE.BoxGeometry(5.0, 0.2, 0.2), steelMat);
+            topChord.position.y = 1.0;
+            const botChord = new THREE.Mesh(new THREE.BoxGeometry(5.0, 0.2, 0.2), steelMat);
+            botChord.position.y = -1.0;
+            assemblyGroup.add(topChord, botChord);
+
+            for (let i = -2; i <= 2; i++) {
+              const strut = new THREE.Mesh(new THREE.CylinderGeometry(0.07, 0.07, 2.0, 12), darkSteelMat);
+              strut.position.x = i * 1.1;
+              assemblyGroup.add(strut);
+
+              if (i < 2) {
+                const diag = new THREE.Mesh(new THREE.CylinderGeometry(0.06, 0.06, 2.28, 12), accentMat);
+                diag.position.set(i * 1.1 + 0.55, 0, 0);
+                diag.rotation.z = i % 2 === 0 ? 0.5 : -0.5;
+                assemblyGroup.add(diag);
+              }
+            }
+          } else {
+            // Reinforced Security Gate Frame
+            const frameTop = new THREE.Mesh(new THREE.BoxGeometry(4.6, 0.24, 0.24), darkSteelMat);
+            frameTop.position.y = 1.25;
+            const frameBot = new THREE.Mesh(new THREE.BoxGeometry(4.6, 0.24, 0.24), darkSteelMat);
+            frameBot.position.y = -1.25;
+            const sideL = new THREE.Mesh(new THREE.BoxGeometry(0.24, 2.7, 0.24), darkSteelMat);
+            sideL.position.x = -2.2;
+            const sideR = new THREE.Mesh(new THREE.BoxGeometry(0.24, 2.7, 0.24), darkSteelMat);
+            sideR.position.x = 2.2;
+            const accentBar = new THREE.Mesh(new THREE.BoxGeometry(4.4, 0.14, 0.28), accentMat);
+            assemblyGroup.add(frameTop, frameBot, sideL, sideR, accentBar);
+
+            for (let x = -1.8; x <= 1.85; x += 0.36) {
+              const picket = new THREE.Mesh(new THREE.BoxGeometry(0.09, 2.45, 0.09), steelMat);
+              picket.position.x = x;
+              assemblyGroup.add(picket);
+            }
+          }
+        }
+
+        buildAssembly('ibeam');
+
+        let wireframeOn = false;
+        let autoRotateOn = true;
+        let pointerDown = false;
+        let lastX = 0;
+        let lastY = 0;
+
+        threeCanvas.addEventListener('mousedown', (e) => {
+          pointerDown = true;
+          lastX = e.clientX;
+          lastY = e.clientY;
+        });
+        window.addEventListener('mouseup', () => { pointerDown = false; });
+        window.addEventListener('mousemove', (e) => {
+          if (!pointerDown) return;
+          const dx = e.clientX - lastX;
+          const dy = e.clientY - lastY;
+          lastX = e.clientX;
+          lastY = e.clientY;
+          assemblyGroup.rotation.y += dx * 0.01;
+          assemblyGroup.rotation.x += dy * 0.01;
+        });
+
+        threeCanvas.addEventListener('touchstart', (e) => {
+          if (e.touches[0]) {
+            pointerDown = true;
+            lastX = e.touches[0].clientX;
+            lastY = e.touches[0].clientY;
+          }
+        }, { passive: true });
+        threeCanvas.addEventListener('touchend', () => { pointerDown = false; });
+        threeCanvas.addEventListener('touchmove', (e) => {
+          if (!pointerDown || !e.touches[0]) return;
+          const dx = e.touches[0].clientX - lastX;
+          const dy = e.touches[0].clientY - lastY;
+          lastX = e.touches[0].clientX;
+          lastY = e.touches[0].clientY;
+          assemblyGroup.rotation.y += dx * 0.012;
+          assemblyGroup.rotation.x += dy * 0.012;
+        }, { passive: true });
+
+        document.querySelectorAll('.model-select-btn').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const model = btn.dataset.model || 'ibeam';
+            buildAssembly(model);
+            document.querySelectorAll('.model-select-btn').forEach((b) => {
+              b.classList.remove('bg-electric/15', 'border-electric');
+              b.classList.add('surface-glass', 'border-white/10');
+            });
+            btn.classList.remove('surface-glass', 'border-white/10');
+            btn.classList.add('bg-electric/15', 'border-electric');
+            const caption = document.getElementById('three-model-caption');
+            if (caption) {
+              const names = {
+                ibeam: 'ACTIVE ASSEMBLY: STRUCTURAL I-BEAM NODE',
+                truss: 'ACTIVE ASSEMBLY: ARCHITECTURAL SPACE TRUSS',
+                gate: 'ACTIVE ASSEMBLY: REINFORCED SECURITY GATE FRAME'
+              };
+              caption.textContent = names[model] || names.ibeam;
+            }
+          });
+        });
+
+        const wireframeBtn = document.getElementById('toggle-wireframe-btn');
+        if (wireframeBtn) {
+          wireframeBtn.addEventListener('click', () => {
+            wireframeOn = !wireframeOn;
+            steelMat.wireframe = wireframeOn;
+            darkSteelMat.wireframe = wireframeOn;
+            accentMat.wireframe = wireframeOn;
+            wireframeBtn.textContent = `CAD WIREFRAME: ${wireframeOn ? 'ON' : 'OFF'}`;
+          });
+        }
+
+        const autoRotateBtn = document.getElementById('toggle-autorotate-btn');
+        if (autoRotateBtn) {
+          autoRotateBtn.addEventListener('click', () => {
+            autoRotateOn = !autoRotateOn;
+            autoRotateBtn.textContent = `AUTO-ORBIT: ${autoRotateOn ? 'ON' : 'OFF'}`;
+          });
+        }
+
+        window.addEventListener('resize', () => {
+          const w = threeCanvas.clientWidth;
+          const h = threeCanvas.clientHeight;
+          if (w && h) {
+            camera.aspect = w / h;
+            camera.updateProjectionMatrix();
+            renderer.setSize(w, h, false);
+          }
+        });
+
+        function animateThree() {
+          requestAnimationFrame(animateThree);
+          if (autoRotateOn && !pointerDown) {
+            assemblyGroup.rotation.y += 0.006;
+          }
+          renderer.render(scene, camera);
+        }
+        animateThree();
+      }
+
+      /* -------------------------------------------------------------------
+         8. INTERACTIVE PROJECT CONFIGURATOR & WHATSAPP PREPOPULATION
+         ------------------------------------------------------------------- */
+      const cfgType = document.getElementById('cfg-type');
+      const cfgCategory = document.getElementById('cfg-category');
+      const cfgMaterial = document.getElementById('cfg-material');
+      const cfgDimensions = document.getElementById('cfg-dimensions');
+      const cfgBudget = document.getElementById('cfg-budget');
+      const cfgLocation = document.getElementById('cfg-location');
+      const cfgSpecs = document.getElementById('cfg-specs');
+      const cfgFiles = document.getElementById('cfg-files');
+      const cfgWhatsappBtn = document.getElementById('cfg-whatsapp-btn');
+      const transferBtn = document.getElementById('transfer-to-quote-btn');
+
+      function updateConfiguratorSummary() {
+        const typeVal = cfgType?.value || 'Custom Metal Fabrication';
+        const catVal = cfgCategory?.value || 'Industrial / Commercial';
+        const matVal = cfgMaterial?.value || 'Mild Steel';
+        const dimVal = cfgDimensions?.value.trim() || 'To be confirmed';
+        const budVal = cfgBudget?.value || 'Request Formal Quotation';
+        const locVal = cfgLocation?.value.trim() || 'Vosloorus, Gauteng';
+        const specVal = cfgSpecs?.value.trim() || 'No additional notes specified yet.';
+
+        document.getElementById('sum-type').textContent = typeVal;
+        document.getElementById('sum-category').textContent = catVal;
+        document.getElementById('sum-material').textContent = matVal;
+        document.getElementById('sum-dimensions').textContent = dimVal;
+        document.getElementById('sum-budget').textContent = budVal;
+        document.getElementById('sum-location').textContent = locVal;
+        document.getElementById('sum-specs').textContent = specVal;
+
+        const fileNames = cfgFiles && cfgFiles.files && cfgFiles.files.length > 0
+          ? Array.from(cfgFiles.files).map((f) => f.name).join(', ')
+          : 'None attached';
+        document.getElementById('sum-files').textContent = fileNames;
+        const fileListLabel = document.getElementById('cfg-file-list');
+        if (fileListLabel) {
+          fileListLabel.textContent = fileNames !== 'None attached' ? `Attached: ${fileNames}` : '';
+        }
+
+        // Prepopulate WhatsApp URL with full project brief
+        const waMessage = [
+          'Hello RAPTOR CUSTOM FABWORX,',
+          'I would like to request a quotation for the following metal fabrication project:',
+          `• Fabrication Type: ${typeVal}`,
+          `• Category: ${catVal}`,
+          `• Material: ${matVal}`,
+          `• Dimensions: ${dimVal}`,
+          `• Budget Scope: ${budVal}`,
+          `• Location: ${locVal}`,
+          `• Specifications: ${specVal}`
+        ].join('\n');
+
+        if (cfgWhatsappBtn) {
+          cfgWhatsappBtn.href = `https://wa.me/27792658508?text=${encodeURIComponent(waMessage)}`;
+        }
+      }
+
+      [cfgType, cfgCategory, cfgMaterial, cfgDimensions, cfgBudget, cfgLocation, cfgSpecs, cfgFiles].forEach((el) => {
+        if (el) {
+          el.addEventListener('input', updateConfiguratorSummary);
+          el.addEventListener('change', updateConfiguratorSummary);
+        }
+      });
+      updateConfiguratorSummary();
+
+      if (transferBtn) {
+        transferBtn.addEventListener('click', () => {
+          const qService = document.getElementById('q-service');
+          const qLocation = document.getElementById('q-location');
+          const qDescription = document.getElementById('q-description');
+
+          if (qService && cfgType) qService.value = cfgType.value;
+          if (qLocation && cfgLocation) qLocation.value = cfgLocation.value;
+          if (qDescription) {
+            qDescription.value = [
+              `Category: ${cfgCategory?.value || ''}`,
+              `Material: ${cfgMaterial?.value || ''}`,
+              `Dimensions: ${cfgDimensions?.value || 'To be confirmed'}`,
+              `Budget Scope: ${cfgBudget?.value || ''}`,
+              `Specifications: ${cfgSpecs?.value || ''}`
+            ].join('\n');
+          }
+          updateQuoteWhatsappLink();
+          document.getElementById('quotation')?.scrollIntoView({ behavior: 'smooth' });
+        });
+      }
+
+      /* -------------------------------------------------------------------
+         9. QUOTATION FORM VALIDATION & LIVE WHATSAPP INTEGRATION
+         ------------------------------------------------------------------- */
+      const quoteForm = document.getElementById('quotation-form');
+      const quoteFeedback = document.getElementById('quote-feedback');
+      const quoteWhatsappDirect = document.getElementById('quote-whatsapp-direct');
+
+      function updateQuoteWhatsappLink() {
+        const name = document.getElementById('q-name')?.value.trim();
+        const company = document.getElementById('q-company')?.value.trim();
+        const service = document.getElementById('q-service')?.value;
+        const location = document.getElementById('q-location')?.value.trim();
+        const desc = document.getElementById('q-description')?.value.trim();
+
+        const lines = [
+          'Hello RAPTOR CUSTOM FABWORX,',
+          name ? `My name is ${name}${company ? ` (${company})` : ''}.` : 'I would like to discuss a fabrication project.',
+          service ? `• Service Required: ${service}` : '',
+          location ? `• Project Location: ${location}` : '',
+          desc ? `• Project Details: ${desc}` : ''
+        ].filter(Boolean).join('\n');
+
+        if (quoteWhatsappDirect) {
+          quoteWhatsappDirect.href = `https://wa.me/27792658508?text=${encodeURIComponent(lines)}`;
+        }
+      }
+
+      if (quoteForm) {
+        quoteForm.querySelectorAll('input, select, textarea').forEach((field) => {
+          field.addEventListener('input', updateQuoteWhatsappLink);
+          field.addEventListener('change', updateQuoteWhatsappLink);
+        });
+
+        quoteForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          const name = document.getElementById('q-name')?.value.trim();
+          const phone = document.getElementById('q-phone')?.value.trim();
+          const email = document.getElementById('q-email')?.value.trim();
+          const location = document.getElementById('q-location')?.value.trim();
+          const description = document.getElementById('q-description')?.value.trim();
+
+          const emailValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email || '');
+          if (!name || !phone || !emailValid || !location || !description) {
+            if (quoteFeedback) {
+              quoteFeedback.className = 'p-4 rounded-xl text-sm bg-electric/15 border border-electric text-white';
+              quoteFeedback.textContent = 'Please complete all required fields (Full Name, Telephone, Valid Email, Project Location, and Project Description) before submitting.';
+            }
+            return;
+          }
+
+          updateQuoteWhatsappLink();
+          if (quoteFeedback) {
+            quoteFeedback.className = 'p-5 rounded-xl text-sm bg-[#25D366]/15 border border-[#25D366]/50 text-white space-y-3';
+            quoteFeedback.innerHTML = `
+              <div class="font-display font-bold uppercase tracking-wider text-base">ENQUIRY PREPARED &amp; LOGGED</div>
+              <p class="text-xs text-platinum/90 leading-relaxed">
+                Thank you, <strong>${name.replace(/[<>&"]/g, '')}</strong>. Your specification brief has been securely formatted. For immediate workshop response or to send reference images directly, launch WhatsApp below or call <strong>079 265 8508</strong>.
+              </p>
+              <div>
+                <a href="${quoteWhatsappDirect?.href}" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[#25D366] text-obsidian font-display font-bold text-xs tracking-wider uppercase">
+                  DISCUSS YOUR PROJECT ON WHATSAPP →
+                </a>
+              </div>
+            `;
+          }
+        });
+      }
+
+      /* -------------------------------------------------------------------
+         10. EDITABLE BUSINESS HOURS & BACK TO TOP
+         ------------------------------------------------------------------- */
+      const editHoursBtn = document.getElementById('edit-hours-btn');
+      const hoursDisplay = document.getElementById('business-hours-display');
+      if (editHoursBtn && hoursDisplay) {
+        let editingHours = false;
+        editHoursBtn.addEventListener('click', () => {
+          editingHours = !editingHours;
+          hoursDisplay.contentEditable = String(editingHours);
+          hoursDisplay.classList.toggle('outline-dashed', editingHours);
+          hoursDisplay.classList.toggle('outline-1', editingHours);
+          hoursDisplay.classList.toggle('outline-electric', editingHours);
+          hoursDisplay.classList.toggle('p-2', editingHours);
+          hoursDisplay.classList.toggle('rounded-lg', editingHours);
+          editHoursBtn.textContent = editingHours ? 'SAVE HOURS' : 'EDIT HOURS';
+          if (editingHours) hoursDisplay.focus();
+        });
+      }
+
+      const backToTopBtn = document.getElementById('back-to-top');
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener('click', () => {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      /* -------------------------------------------------------------------
+         11. GSAP SCROLL REVEALS & MAGNETIC BUTTONS
+         ------------------------------------------------------------------- */
+      if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        gsap.registerPlugin(ScrollTrigger);
+
+        gsap.from('.hero-stagger', {
+          y: 28,
+          opacity: 0,
+          duration: 0.95,
+          stagger: 0.12,
+          ease: 'power3.out',
+          delay: 0.35
+        });
+
+        gsap.utils.toArray('.reveal-up').forEach((el) => {
+          gsap.from(el, {
+            y: 36,
+            opacity: 0,
+            duration: 0.85,
+            ease: 'power3.out',
+            scrollTrigger: {
+              trigger: el,
+              start: 'top 86%',
+              once: true
+            }
+          });
+        });
+
+        const progressBar = document.getElementById('timeline-progress-bar');
+        if (progressBar) {
+          ScrollTrigger.create({
+            trigger: '#approach',
+            start: 'top 75%',
+            once: true,
+            onEnter: () => {
+              progressBar.style.width = '100%';
+            }
+          });
+        }
+      }
+
+      // Subtle Magnetic Cursor Pull on Primary Buttons (Desktop)
+      if (window.matchMedia('(pointer: fine)').matches) {
+        document.querySelectorAll('.magnetic-btn').forEach((btn) => {
+          btn.addEventListener('mousemove', (e) => {
+            const rect = btn.getBoundingClientRect();
+            const x = (e.clientX - rect.left - rect.width / 2) * 0.16;
+            const y = (e.clientY - rect.top - rect.height / 2) * 0.16;
+            btn.style.transform = `translate(${x}px, ${y}px)`;
+          });
+          btn.addEventListener('mouseleave', () => {
+            btn.style.transform = 'translate(0px, 0px)';
+          });
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
